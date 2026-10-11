@@ -16,6 +16,7 @@
 
 package com.android.settings.network.telephony;
 
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -28,6 +29,8 @@ import android.telephony.SubscriptionManager;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
+import com.android.settings.activityembedding.ActivityEmbeddingRulesController;
+import com.android.settings.activityembedding.ActivityEmbeddingUtils;
 import com.android.settings.network.CarrierConfigCache;
 
 /**
@@ -65,6 +68,17 @@ public class CarrierPreferenceController extends TelephonyBasePreferenceControll
         if (getPreferenceKey().equals(preference.getKey())) {
             final Intent carrierSettingsIntent = getCarrierSettingsActivityIntent(mSubId);
             if (carrierSettingsIntent != null) {
+                // Show the carrier app in the right pane like other settings pages. Keep the
+                // new task flag when not launched from an activity.
+                if (mContext instanceof Activity
+                        && ActivityEmbeddingUtils.isEmbeddingActivityEnabled(mContext)) {
+                    ActivityEmbeddingRulesController.registerTwoPanePairRuleForSettingsHome(
+                            mContext,
+                            carrierSettingsIntent.getComponent(),
+                            carrierSettingsIntent.getAction(),
+                            false /* clearTop */);
+                    carrierSettingsIntent.removeFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                }
                 mContext.startActivity(carrierSettingsIntent);
             }
             return true;
