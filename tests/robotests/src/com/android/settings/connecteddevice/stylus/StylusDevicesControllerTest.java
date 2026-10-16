@@ -663,6 +663,127 @@ public class StylusDevicesControllerTest {
                 Secure.STYLUS_POINTER_ICON_ENABLED, -1)).isEqualTo(1);
     }
 
+    @Test
+    public void penRefreshRateLimitPreference_configDisabled_notAdded() {
+        when(mSpiedResources.getBoolean(R.bool.config_show_pen_refresh_rate_limit))
+                .thenReturn(false);
+
+        showScreen(mController);
+
+        assertThat(mPreferenceContainer.findPreference(
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT)).isNull();
+    }
+
+    @Test
+    public void penRefreshRateLimitPreference_noStylus_notAdded() {
+        when(mSpiedResources.getBoolean(R.bool.config_show_pen_refresh_rate_limit))
+                .thenReturn(true);
+        StylusDevicesController controller = new StylusDevicesController(
+                mContext, null, null, mLifecycle);
+
+        showScreen(controller);
+
+        assertThat(mPreferenceContainer.getPreferenceCount()).isEqualTo(0);
+    }
+
+    @Test
+    public void penRefreshRateLimitPreference_bluetoothStylus_addedLastAndCheckedByDefault() {
+        when(mSpiedResources.getBoolean(R.bool.config_show_pen_refresh_rate_limit))
+                .thenReturn(true);
+        when(mBluetoothDevice.getMetadata(BluetoothDevice.METADATA_DEVICE_TYPE)).thenReturn(
+                BluetoothDevice.DEVICE_TYPE_STYLUS.getBytes());
+        Settings.Secure.putString(mContext.getContentResolver(),
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT, null);
+        StylusDevicesController controller = new StylusDevicesController(
+                mContext, null, mCachedBluetoothDevice, mLifecycle);
+
+        showScreen(controller);
+        SwitchPreferenceCompat pref = mPreferenceContainer.findPreference(
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT);
+
+        assertThat(mPreferenceContainer.getPreferenceCount()).isEqualTo(5);
+        assertThat(mPreferenceContainer.getPreference(4)).isSameInstanceAs(pref);
+        assertThat(pref.getTitle().toString()).isEqualTo(
+                mContext.getString(R.string.stylus_pen_refresh_rate_limit));
+        assertThat(pref.getSummary().toString()).isEqualTo(
+                mContext.getString(R.string.stylus_pen_refresh_rate_limit_summary));
+        assertThat(pref.isChecked()).isTrue();
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT)).isNull();
+    }
+
+    @Test
+    public void penRefreshRateLimitPreference_zero_unchecked() {
+        when(mSpiedResources.getBoolean(R.bool.config_show_pen_refresh_rate_limit))
+                .thenReturn(true);
+        Settings.Secure.putInt(mContext.getContentResolver(),
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT, 0);
+
+        showScreen(mController);
+        SwitchPreferenceCompat pref = mPreferenceContainer.findPreference(
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT);
+
+        assertThat(pref.isChecked()).isFalse();
+    }
+
+    @Test
+    public void penRefreshRateLimitPreference_nonzero_checked() {
+        when(mSpiedResources.getBoolean(R.bool.config_show_pen_refresh_rate_limit))
+                .thenReturn(true);
+        Settings.Secure.putInt(mContext.getContentResolver(),
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT, 2);
+
+        showScreen(mController);
+        SwitchPreferenceCompat pref = mPreferenceContainer.findPreference(
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT);
+
+        assertThat(pref.isChecked()).isTrue();
+    }
+
+    @Test
+    public void penRefreshRateLimitPreference_click_writesSecureSetting() {
+        when(mSpiedResources.getBoolean(R.bool.config_show_pen_refresh_rate_limit))
+                .thenReturn(true);
+        Settings.Secure.putInt(mContext.getContentResolver(),
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT, 1);
+        showScreen(mController);
+        SwitchPreferenceCompat pref = mPreferenceContainer.findPreference(
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT);
+
+        pref.performClick();
+
+        assertThat(pref.isChecked()).isFalse();
+        assertThat(Settings.Secure.getInt(mContext.getContentResolver(),
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT, -1)).isEqualTo(0);
+
+        pref.performClick();
+
+        assertThat(pref.isChecked()).isTrue();
+        assertThat(Settings.Secure.getInt(mContext.getContentResolver(),
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT, -1)).isEqualTo(1);
+    }
+
+    @Test
+    public void penRefreshRateLimitPreference_resume_reusesPreferenceAndUpdatesCheckedState() {
+        when(mSpiedResources.getBoolean(R.bool.config_show_pen_refresh_rate_limit))
+                .thenReturn(true);
+        Settings.Secure.putInt(mContext.getContentResolver(),
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT, 0);
+        showScreen(mController);
+        SwitchPreferenceCompat pref = mPreferenceContainer.findPreference(
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT);
+        Settings.Secure.putInt(mContext.getContentResolver(),
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT, 1);
+
+        mController.onResume();
+
+        assertThat(mPreferenceContainer.getPreferenceCount()).isEqualTo(5);
+        assertThat(mPreferenceContainer.findPreference(
+                StylusDevicesController.KEY_PEN_REFRESH_RATE_LIMIT)).isSameInstanceAs(pref);
+        assertThat(mPreferenceContainer.getPreference(4)).isSameInstanceAs(pref);
+        assertThat(pref.isChecked()).isTrue();
+    }
+
     private void showScreen(StylusDevicesController controller) {
         controller.displayPreference(mScreen);
     }

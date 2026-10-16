@@ -440,4 +440,7 @@
     <string name="lockscreen_display_timeout_5m">5 minutes</string>
     <string name="lockscreen_display_timeout_10m">10 minutes</string>
     <string name="lockscreen_display_timeout_30m">30 minutes</string>
+    <!-- Pen refresh rate limit -->
+    <string name="stylus_pen_refresh_rate_limit">Limit refresh rate while using the pen</string>
+    <string name="stylus_pen_refresh_rate_limit_summary">Lowers the maximum refresh rate while the pen is in use, for more reliable input.</string>
 </resources>

@@ -76,6 +76,10 @@ public class StylusDevicesController extends AbstractPreferenceController implem
     @VisibleForTesting
     static final String KEY_SHOW_STYLUS_POINTER_ICON = "show_stylus_pointer_icon";
 
+    // The pen service reads and observes this secure setting.
+    @VisibleForTesting
+    static final String KEY_PEN_REFRESH_RATE_LIMIT = "pen_refresh_rate_limit";
+
     private static final String TAG = "StylusDevicesController";
 
     private final boolean mConfigEnableDefaultNotesForWorkProfile;
@@ -209,6 +213,25 @@ public class StylusDevicesController extends AbstractPreferenceController implem
         return pref;
     }
 
+    @Nullable
+    private SwitchPreferenceCompat createPenRefreshRateLimitPreference(
+            SwitchPreferenceCompat preference) {
+        if (!mContext.getResources().getBoolean(R.bool.config_show_pen_refresh_rate_limit)) {
+            return null;
+        }
+        SwitchPreferenceCompat pref = preference == null ? new SwitchPreferenceCompat(mContext)
+                : preference;
+        pref.setKey(KEY_PEN_REFRESH_RATE_LIMIT);
+        pref.setTitle(mContext.getString(R.string.stylus_pen_refresh_rate_limit));
+        pref.setSummary(mContext.getString(R.string.stylus_pen_refresh_rate_limit_summary));
+        pref.setOrder(Integer.MAX_VALUE - 1);
+        pref.setPersistent(false);
+        pref.setOnPreferenceChangeListener(this);
+        pref.setChecked(Settings.Secure.getInt(mContext.getContentResolver(),
+                KEY_PEN_REFRESH_RATE_LIMIT, 1) != 0);
+        return pref;
+    }
+
     @Override
     public boolean onPreferenceClick(Preference preference) {
         String key = preference.getKey();
@@ -254,6 +277,9 @@ public class StylusDevicesController extends AbstractPreferenceController implem
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         String key = preference.getKey();
         switch (key) {
+            case KEY_PEN_REFRESH_RATE_LIMIT:
+                return Settings.Secure.putInt(mContext.getContentResolver(),
+                        KEY_PEN_REFRESH_RATE_LIMIT, (boolean) newValue ? 1 : 0);
             case KEY_HANDWRITING:
                 Settings.Secure.putInt(mContext.getContentResolver(),
                         Settings.Secure.STYLUS_HANDWRITING_ENABLED,
@@ -307,6 +333,14 @@ public class StylusDevicesController extends AbstractPreferenceController implem
                 createShowStylusPointerIconPreference(currShowStylusPointerIconPref);
         if (currShowStylusPointerIconPref == null && showStylusPointerIconPref != null) {
             mPreferencesContainer.addPreference(showStylusPointerIconPref);
+        }
+
+        SwitchPreferenceCompat currPenRefreshRateLimitPref = mPreferencesContainer
+                .findPreference(KEY_PEN_REFRESH_RATE_LIMIT);
+        Preference penRefreshRateLimitPref =
+                createPenRefreshRateLimitPreference(currPenRefreshRateLimitPref);
+        if (currPenRefreshRateLimitPref == null && penRefreshRateLimitPref != null) {
+            mPreferencesContainer.addPreference(penRefreshRateLimitPref);
         }
     }
 

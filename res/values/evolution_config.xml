@@ -35,4 +35,7 @@
 
     <!-- Device image for HW info -->
     <string name="config_deviceImageDrawable" translatable="false"></string>
+
+    <!-- Whether to show the pen refresh rate limit preference -->
+    <bool name="config_show_pen_refresh_rate_limit">false</bool>
 </resources>
