@@ -43,8 +43,8 @@
     <string name="lock_settings_picker_pattern_size_message">패턴의 크기를 선택하세요</string>
     <string name="lockpattern_settings_enable_error_path_title">패턴 오류 표시</string>
     <string name="lockpattern_settings_enable_dots_title">패턴 점 표시</string>
-    <string name="max_refresh_rate_title">최대 화면 재생률</string>
-    <string name="min_refresh_rate_title">최소 재생률</string>
+    <string name="max_refresh_rate_title">최대 주사율</string>
+    <string name="min_refresh_rate_title">최소 주사율</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">태블릿 앞면에 지문 센서가 있습니다.</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="device">기기 앞면에 지문 센서가 있습니다.</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="default">휴대전화 앞면에 지문 센서가 있습니다.</string>
