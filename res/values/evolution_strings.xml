@@ -407,4 +407,8 @@
 
     <!-- Label for a numbered SIM card.  [CHAR LIMIT=40] -->
     <string name="sim_card_number_title" translatable="false">SIM <xliff:g id="card_number">%1$d</xliff:g></string>
+
+    <!-- Pen refresh rate limit -->
+    <string name="stylus_pen_refresh_rate_limit">Limit refresh rate while using the pen</string>
+    <string name="stylus_pen_refresh_rate_limit_summary">Lowers the maximum screen refresh rate while the pen is in use for more reliable pen input.</string>
 </resources>

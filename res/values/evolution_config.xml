@@ -35,4 +35,7 @@
 
     <!-- Whether to show double tap ambient settings -->
     <bool name="config_supports_double_tap_ambient" translatable="false">true</bool>
+
+    <!-- Whether to show the pen refresh rate limit preference -->
+    <bool name="config_show_pen_refresh_rate_limit">false</bool>
 </resources>
