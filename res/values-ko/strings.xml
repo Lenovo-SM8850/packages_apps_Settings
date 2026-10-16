@@ -936,8 +936,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"디스플레이 간에 마우스 이동"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"외부 디스플레이 사용"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"디스플레이 해상도"</string>
-    <string name="external_display_resolution_refresh_rate_settings_title" msgid="4331709890849304277">"해상도 및 화면 재생 빈도"</string>
-    <string name="external_display_refresh_rate_title" msgid="6326813722241312213">"화면 재생 빈도"</string>
+    <string name="external_display_resolution_refresh_rate_settings_title" msgid="4331709890849304277">"해상도 및 화면 주사율"</string>
+    <string name="external_display_refresh_rate_title" msgid="6326813722241312213">"화면 주사율"</string>
     <string name="external_display_resolution_title" msgid="124681567143280861">"해상도"</string>
     <string name="external_display_connection_preference" msgid="3337612335495542718">"기본 연결 동작"</string>
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"별도 디스플레이로 사용"</string>
@@ -999,8 +999,8 @@
     <string name="wifi_ask_disable" msgid="1663208096020309639">"<xliff:g id="REQUESTER">%s</xliff:g>에서 Wi-Fi를 사용 중지하려고 합니다."</string>
     <string name="art_verifier_for_debuggable_title" msgid="1926445785190030479">"디버깅 가능한 앱의 바이트 코드 확인"</string>
     <string name="art_verifier_for_debuggable_summary" msgid="4802875841862652879">"ART가 디버깅 가능한 앱의 바이트 코드를 확인하도록 허용"</string>
-    <string name="show_refresh_rate" msgid="5742688821872354973">"새로고침 빈도 보기"</string>
-    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"현재 화면 새로고침 빈도 보기"</string>
+    <string name="show_refresh_rate" msgid="5742688821872354973">"주사율 보기"</string>
+    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"현재 화면 주사율 보기"</string>
     <string name="show_hdr_sdr_ratio" msgid="4188007289024955585">"HDR/SDR 비율 표시"</string>
     <string name="show_hdr_sdr_ratio_summary" msgid="986292785096013733">"현재 HDR/SDR 비율 표시"</string>
     <string name="nfc_quick_toggle_title" msgid="3607620705230351666">"NFC"</string>
@@ -1362,9 +1362,9 @@
     <string name="disable_game_default_frame_rate_title" msgid="3712908601744143753">"게임 기본 프레임 속도 사용 중지"</string>
     <string name="disable_game_default_frame_rate_summary" msgid="4436762704707434225">"게임 최대 프레임 속도 <xliff:g id="FRAME_RATE">%1$d</xliff:g>Hz 제한을 사용 중지합니다."</string>
     <string name="peak_refresh_rate_title" msgid="2056355754210341011">"스무스 디스플레이"</string>
-    <string name="peak_refresh_rate_summary" msgid="3212309985294885790">"일부 콘텐츠의 화면 재생 빈도를 자동으로 최대 <xliff:g id="ID_1">%1$d</xliff:g>Hz까지 늘립니다. 배터리 사용량이 증가합니다."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="3325789621928312050">"가장 높은 새로고침 빈도 강제 적용"</string>
-    <string name="force_high_refresh_rate_desc" msgid="7794566420873814875">"향상된 터치 반응 속도 및 애니메이션 품질에 맞는 가장 높은 새로고침 빈도입니다. 배터리 사용량이 증가합니다."</string>
+    <string name="peak_refresh_rate_summary" msgid="3212309985294885790">"일부 콘텐츠의 화면 주사율을 자동으로 최대 <xliff:g id="ID_1">%1$d</xliff:g>Hz까지 늘립니다. 배터리 사용량이 증가합니다."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="3325789621928312050">"가장 높은 주사율 강제 적용"</string>
+    <string name="force_high_refresh_rate_desc" msgid="7794566420873814875">"향상된 터치 반응 속도 및 애니메이션 품질에 맞는 가장 높은 주사율입니다. 배터리 사용량이 증가합니다."</string>
     <string name="adaptive_sleep_title" msgid="2987961991423539233">"화면 시선 감지"</string>
     <string name="adaptive_sleep_title_no_permission" msgid="1719759921214237016">"카메라 액세스 권한 필요"</string>
     <string name="adaptive_sleep_summary_no_permission" msgid="5822591289468803691">"화면 시선 감지를 사용하려면 카메라 액세스 권한이 필요합니다. 탭하여 기기 맞춤설정 서비스의 권한을 관리하세요"</string>
@@ -3771,7 +3771,7 @@
     <string name="keywords_always_show_time_info" msgid="1066752498285497595">"화면 보호 모드 상시 사용 설정(AOD)"</string>
     <string name="keywords_change_nfc_tag_apps_state" msgid="9032287964590554366">"nfc, 태그, 리더"</string>
     <string name="keywords_keyboard_vibration" msgid="5870649353180725920">"키보드, 햅틱, 진동, 입력"</string>
-    <string name="keywords_external_display_settings" msgid="4717990369488386495">"외부 디스플레이, 연결된 디스플레이, 확장 디스플레이, 두 번째 디스플레이, 내장 디스플레이, 디스플레이 정렬, 미러링, 디스플레이 크기, 회전, 해상도, 화면 재생 빈도"</string>
+    <string name="keywords_external_display_settings" msgid="4717990369488386495">"외부 디스플레이, 연결된 디스플레이, 확장 디스플레이, 두 번째 디스플레이, 내장 디스플레이, 디스플레이 정렬, 미러링, 디스플레이 크기, 회전, 해상도, 화면 주사율"</string>
     <string name="keywords_text_cursor_blink_rate" msgid="7682963763334011148">"캐럿, 텍스트 캐럿, 텍스트 커서, 커서, 깜박임, 깜박임 간격, 깜박임 속도, 애니메이션, 애니메이션 줄이기, 애니메이션 삭제"</string>
     <string name="sound_dashboard_summary" msgid="8254699132423665654">"볼륨 및 진동"</string>
     <string name="media_volume_option_title" msgid="5966569685119475630">"미디어 볼륨"</string>

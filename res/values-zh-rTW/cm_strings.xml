@@ -43,8 +43,8 @@
     <string name="lock_settings_picker_pattern_size_message">選擇解鎖圖案大小</string>
     <string name="lockpattern_settings_enable_error_path_title">顯示解鎖圖案錯誤</string>
     <string name="lockpattern_settings_enable_dots_title">顯示解鎖圖案節點</string>
-    <string name="max_refresh_rate_title">最高螢幕更新頻率</string>
-    <string name="min_refresh_rate_title">最低更新率</string>
+    <string name="max_refresh_rate_title">最高刷新率</string>
+    <string name="min_refresh_rate_title">最低刷新率</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">找到位於平板電腦前面的指紋感應器。</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="device">指紋感應器位於裝置正面。</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="default">指紋感應器位於手機正面。</string>

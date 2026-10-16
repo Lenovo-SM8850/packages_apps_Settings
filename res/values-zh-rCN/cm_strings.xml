@@ -44,7 +44,7 @@
     <string name="lockpattern_settings_enable_error_path_title">显示图案错误</string>
     <string name="lockpattern_settings_enable_dots_title">显示图案圆点</string>
     <string name="max_refresh_rate_title">最高刷新率</string>
-    <string name="min_refresh_rate_title">最小刷新率</string>
+    <string name="min_refresh_rate_title">最低刷新率</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">在您的平板电脑正面找到指纹传感器。</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="device">在您的设备正面找到指纹传感器。</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="default">在您的手机正面找到指纹传感器。</string>

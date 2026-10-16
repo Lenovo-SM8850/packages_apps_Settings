@@ -999,8 +999,8 @@
     <string name="wifi_ask_disable" msgid="1663208096020309639">"<xliff:g id="REQUESTER">%s</xliff:g>请求关闭 WLAN"</string>
     <string name="art_verifier_for_debuggable_title" msgid="1926445785190030479">"验证可调试的应用的字节码"</string>
     <string name="art_verifier_for_debuggable_summary" msgid="4802875841862652879">"允许 ART 验证可调试的应用的字节码"</string>
-    <string name="show_refresh_rate" msgid="5742688821872354973">"显示刷新频率"</string>
-    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"显示当前的显示屏刷新频率"</string>
+    <string name="show_refresh_rate" msgid="5742688821872354973">"显示刷新率"</string>
+    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"显示当前的显示屏刷新率"</string>
     <string name="show_hdr_sdr_ratio" msgid="4188007289024955585">"显示 HDR/SDR 比率"</string>
     <string name="show_hdr_sdr_ratio_summary" msgid="986292785096013733">"显示当前的 HDR/SDR 比率"</string>
     <string name="nfc_quick_toggle_title" msgid="3607620705230351666">"NFC"</string>
@@ -1363,8 +1363,8 @@
     <string name="disable_game_default_frame_rate_summary" msgid="4436762704707434225">"停用游戏的帧速率上限 (<xliff:g id="FRAME_RATE">%1$d</xliff:g> Hz)。"</string>
     <string name="peak_refresh_rate_title" msgid="2056355754210341011">"流畅画面"</string>
     <string name="peak_refresh_rate_summary" msgid="3212309985294885790">"自动调高某些内容的刷新率，最高可调至 <xliff:g id="ID_1">%1$d</xliff:g> Hz。启用此设置会增加耗电量。"</string>
-    <string name="force_high_refresh_rate_toggle" msgid="3325789621928312050">"强制使用峰值刷新频率"</string>
-    <string name="force_high_refresh_rate_desc" msgid="7794566420873814875">"使用最高刷新频率可提升按触操作响应和动画质量，但会增加耗电量。"</string>
+    <string name="force_high_refresh_rate_toggle" msgid="3325789621928312050">"强制使用峰值刷新率"</string>
+    <string name="force_high_refresh_rate_desc" msgid="7794566420873814875">"使用最高刷新率可提升按触操作响应和动画质量，但会增加耗电量。"</string>
     <string name="adaptive_sleep_title" msgid="2987961991423539233">"屏幕感知"</string>
     <string name="adaptive_sleep_title_no_permission" msgid="1719759921214237016">"需要相机权限"</string>
     <string name="adaptive_sleep_summary_no_permission" msgid="5822591289468803691">"屏幕感知功能需要获得相机权限。点按即可管理“设备个性化服务”的权限"</string>

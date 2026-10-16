@@ -43,8 +43,8 @@
     <string name="lock_settings_picker_pattern_size_message">パターンサイズを選択してください</string>
     <string name="lockpattern_settings_enable_error_path_title">間違えたパターンを表示</string>
     <string name="lockpattern_settings_enable_dots_title">パターンのドットを表示</string>
-    <string name="max_refresh_rate_title">最高リフレッシュレート</string>
-    <string name="min_refresh_rate_title">最小リフレッシュレート</string>
+    <string name="max_refresh_rate_title">最高リフレッシュ レート</string>
+    <string name="min_refresh_rate_title">最小リフレッシュ レート</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">端末前面にある指紋認証センサーを探してください</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="device">端末前面にある指紋認証センサーを探してください</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="default">端末前面にある指紋認証センサーを探してください</string>

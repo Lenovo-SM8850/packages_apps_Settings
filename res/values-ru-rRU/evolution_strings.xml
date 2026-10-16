@@ -42,4 +42,6 @@
     <!-- Unlimit screenrecord -->
     <string name="unlimit_screenrecord_title">Снять ограничение на запись экрана</string>
     <string name="unlimit_screenrecord_summary">Убрать ограничение на размер в 15 ГБ\nИтоговый файл может иметь очень большой размер</string>
+    <string name="stylus_pen_writing_haptics">Вибрация при письме</string>
+    <string name="stylus_pen_writing_haptics_summary">Вибрация, когда кончик стилуса касается экрана</string>
 </resources>
