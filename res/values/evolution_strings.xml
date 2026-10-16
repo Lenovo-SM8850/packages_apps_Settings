@@ -415,4 +415,7 @@
     <string name="build_type_unofficial">Unofficial build</string>
     <string name="model_serial_hidden">Hidden</string>
     <string name="model_serial_hidden_ends_in">Hidden, ends in <xliff:g id="last_four" example="1A2B">%1$s</xliff:g></string>
+    <!-- Pen refresh rate limit -->
+    <string name="stylus_pen_refresh_rate_limit">Limit refresh rate while using the pen</string>
+    <string name="stylus_pen_refresh_rate_limit_summary">Lowers the maximum screen refresh rate while the pen is in use for more reliable pen input.</string>
 </resources>
