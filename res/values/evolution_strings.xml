@@ -443,4 +443,8 @@
     <!-- Pen refresh rate limit -->
     <string name="stylus_pen_refresh_rate_limit">Limit refresh rate while using the pen</string>
     <string name="stylus_pen_refresh_rate_limit_summary">Lowers the maximum refresh rate while the pen is in use, for more reliable input.</string>
+
+    <!-- Pen writing vibration -->
+    <string name="stylus_pen_writing_haptics">Writing vibration</string>
+    <string name="stylus_pen_writing_haptics_summary">Vibrate when the pen tip touches the screen.</string>
 </resources>
