@@ -114,7 +114,12 @@ public class RemoteVolumeGroupController extends BasePreferenceController implem
 
     private void initRemoteMediaSession() {
         mRoutingSessionInfos.clear();
-        mRoutingSessionInfos.addAll(mLocalMediaManager.getRemoteRoutingSessions());
+        for (RoutingSessionInfo info : mLocalMediaManager.getRemoteRoutingSessions()) {
+            // A session without a volume range cannot back a slider
+            if (info.getVolumeMax() > 0) {
+                mRoutingSessionInfos.add(info);
+            }
+        }
     }
 
     @Override
