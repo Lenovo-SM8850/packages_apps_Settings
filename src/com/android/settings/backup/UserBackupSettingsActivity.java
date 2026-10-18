@@ -17,23 +17,26 @@
 
 package com.android.settings.backup;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources.Theme;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentActivity;
 
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
+import com.android.settings.core.SettingsBaseActivity;
 import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.utils.InsetUtils;
+import com.android.settingslib.activityembedding.ActivityEmbeddingUtils;
 import com.android.settingslib.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.search.SearchIndexableRaw;
+import com.android.settingslib.widget.SettingsThemeHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +52,7 @@ import java.util.List;
  * Therefore, as a simple workaround, we use a new class which is enabled by default.
  */
 @SearchIndexable
-public class UserBackupSettingsActivity extends FragmentActivity implements Indexable {
+public class UserBackupSettingsActivity extends SettingsBaseActivity implements Indexable {
     private static final String TAG = "BackupSettingsActivity";
     private FragmentManager mFragmentManager;
 
@@ -90,8 +93,9 @@ public class UserBackupSettingsActivity extends FragmentActivity implements Inde
                 Log.d(TAG, "Manufacturer provided backup settings, showing the preference screen");
             }
 
+            setTitle(R.string.privacy_settings_title);
             setContentView(R.layout.settings_main_prefs);
-            InsetUtils.applyWindowInsetsListener(findViewById(R.id.main_content));
+            showNavigateUpButton();
 
             // mFragmentManager can be set by {@link #setFragmentManager()} for testing
             if (mFragmentManager == null) {
@@ -101,6 +105,35 @@ public class UserBackupSettingsActivity extends FragmentActivity implements Inde
                     .replace(R.id.main_content, new BackupSettingsFragment())
                     .commit();
         }
+    }
+
+    /** Shows the back button the same way the other settings pages do. */
+    private void showNavigateUpButton() {
+        final ActionBar actionBar = getActionBar();
+        if (actionBar == null) {
+            return;
+        }
+        final boolean isSecondLayerPage = getIntent().getBooleanExtra(
+                SettingsActivity.EXTRA_IS_SECOND_LAYER_PAGE, false);
+        final boolean enabled =
+                !ActivityEmbeddingUtils.shouldHideNavigateUpButton(this, isSecondLayerPage);
+        actionBar.setDisplayHomeAsUpEnabled(enabled);
+        actionBar.setHomeButtonEnabled(enabled);
+        if (SettingsThemeHelper.isExpressiveTheme(this)) {
+            actionBar.setHomeAsUpIndicator(
+                    com.android.settingslib.collapsingtoolbar.R.drawable
+                            .settingslib_expressive_icon_back);
+        }
+    }
+
+    /** Applies the expressive sub settings theme, as the other settings pages do. */
+    @Override
+    public Theme getTheme() {
+        Theme theme = super.getTheme();
+        if (SettingsThemeHelper.isExpressiveTheme(this)) {
+            theme.applyStyle(R.style.Theme_SubSettings_Expressive, true);
+        }
+        return theme;
     }
 
     /**
