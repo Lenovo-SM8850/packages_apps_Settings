@@ -80,6 +80,8 @@ public class StylusDevicesController extends AbstractPreferenceController implem
     @VisibleForTesting
     static final String KEY_PEN_REFRESH_RATE_LIMIT = "pen_refresh_rate_limit";
 
+    private static final String KEY_PEN_WRITING_HAPTICS = "pen_writing_haptics_enabled";
+
     private static final String TAG = "StylusDevicesController";
 
     private final boolean mConfigEnableDefaultNotesForWorkProfile;
@@ -224,11 +226,48 @@ public class StylusDevicesController extends AbstractPreferenceController implem
         pref.setKey(KEY_PEN_REFRESH_RATE_LIMIT);
         pref.setTitle(mContext.getString(R.string.stylus_pen_refresh_rate_limit));
         pref.setSummary(mContext.getString(R.string.stylus_pen_refresh_rate_limit_summary));
-        pref.setOrder(Integer.MAX_VALUE - 1);
+        pref.setOrder(Integer.MAX_VALUE - 2);
         pref.setPersistent(false);
         pref.setOnPreferenceChangeListener(this);
         pref.setChecked(Settings.Secure.getInt(mContext.getContentResolver(),
                 KEY_PEN_REFRESH_RATE_LIMIT, 1) != 0);
+        return pref;
+    }
+
+    @Nullable
+    private SwitchPreferenceCompat createPenWritingHapticsPreference(
+            SwitchPreferenceCompat preference) {
+        if (!mContext.getResources().getBoolean(R.bool.config_show_pen_writing_haptics)) {
+            return null;
+        }
+        // Remember an observed VID/PID for this bonded address, so sleeping pens keep
+        // their preference. Names and generic stylus metadata never establish support.
+        String address = mCachedBluetoothDevice == null ? null
+                : mCachedBluetoothDevice.getDevice().getAddress();
+        android.content.SharedPreferences identities = mContext.getSharedPreferences(
+                "pen_haptic_identities", Context.MODE_PRIVATE);
+        boolean verified = false;
+        if (mInputDevice != null) {
+            verified = mInputDevice.getVendorId() == 0x17ef
+                    && mInputDevice.getProductId() == 0x622e;
+            if (address != null && address.equals(mInputDevice.getBluetoothAddress())) {
+                identities.edit().putBoolean(address, verified).apply();
+            }
+        } else if (address != null && mCachedBluetoothDevice.getBondState()
+                == android.bluetooth.BluetoothDevice.BOND_BONDED) {
+            verified = identities.getBoolean(address, false);
+        }
+        if (!verified) return null;
+        SwitchPreferenceCompat pref = preference == null ? new SwitchPreferenceCompat(mContext)
+                : preference;
+        pref.setKey(KEY_PEN_WRITING_HAPTICS);
+        pref.setTitle(R.string.stylus_pen_writing_haptics);
+        pref.setSummary(R.string.stylus_pen_writing_haptics_summary);
+        pref.setOrder(Integer.MAX_VALUE - 1);
+        pref.setPersistent(false);
+        pref.setOnPreferenceChangeListener(this);
+        pref.setChecked(Settings.Secure.getIntForUser(mContext.getContentResolver(),
+                KEY_PEN_WRITING_HAPTICS, 0, UserHandle.myUserId()) != 0);
         return pref;
     }
 
@@ -277,6 +316,10 @@ public class StylusDevicesController extends AbstractPreferenceController implem
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         String key = preference.getKey();
         switch (key) {
+            case KEY_PEN_WRITING_HAPTICS:
+                return Settings.Secure.putIntForUser(mContext.getContentResolver(),
+                        KEY_PEN_WRITING_HAPTICS, (boolean) newValue ? 1 : 0,
+                        UserHandle.myUserId());
             case KEY_PEN_REFRESH_RATE_LIMIT:
                 return Settings.Secure.putInt(mContext.getContentResolver(),
                         KEY_PEN_REFRESH_RATE_LIMIT, (boolean) newValue ? 1 : 0);
@@ -341,6 +384,14 @@ public class StylusDevicesController extends AbstractPreferenceController implem
                 createPenRefreshRateLimitPreference(currPenRefreshRateLimitPref);
         if (currPenRefreshRateLimitPref == null && penRefreshRateLimitPref != null) {
             mPreferencesContainer.addPreference(penRefreshRateLimitPref);
+        }
+        SwitchPreferenceCompat currHapticsPref = mPreferencesContainer
+                .findPreference(KEY_PEN_WRITING_HAPTICS);
+        Preference hapticsPref = createPenWritingHapticsPreference(currHapticsPref);
+        if (currHapticsPref == null && hapticsPref != null) {
+            mPreferencesContainer.addPreference(hapticsPref);
+        } else if (currHapticsPref != null && hapticsPref == null) {
+            mPreferencesContainer.removePreference(currHapticsPref);
         }
     }
 

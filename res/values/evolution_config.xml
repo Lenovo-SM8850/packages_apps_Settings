@@ -38,4 +38,5 @@
 
     <!-- Whether to show the pen refresh rate limit preference -->
     <bool name="config_show_pen_refresh_rate_limit">false</bool>
+    <bool name="config_show_pen_writing_haptics">false</bool>
 </resources>
