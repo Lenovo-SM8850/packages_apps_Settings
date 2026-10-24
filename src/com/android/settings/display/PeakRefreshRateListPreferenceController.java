@@ -84,7 +84,9 @@ public class PeakRefreshRateListPreferenceController extends BasePreferenceContr
                 Float.compare(mode2.getRefreshRate(), mode1.getRefreshRate()));
             for (Display.Mode m : modes) {
                 if (m.getPhysicalWidth() == mode.getPhysicalWidth() &&
-                        m.getPhysicalHeight() == mode.getPhysicalHeight()) {
+                        m.getPhysicalHeight() == mode.getPhysicalHeight()
+                        && m.getRefreshRate() >= mContext.getResources().getInteger(
+                                com.android.internal.R.integer.config_minPhysicalRefreshRate)) {
                     mEntries.add(String.format("%.02fHz", m.getRefreshRate())
                             .replaceAll("[\\.,]00", ""));
                     mValues.add(mValues.isEmpty()
