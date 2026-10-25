@@ -29,6 +29,12 @@ public class DozeBrightnessPreferenceController extends BasePreferenceController
 
     @Override
     public int getAvailabilityStatus() {
+        if (KEY_DOZE_BRIGHTNESS.equals(getPreferenceKey())
+                && (!mContext.getResources().getBoolean(R.bool.config_show_aod_brightness)
+                        || !new android.hardware.display.AmbientDisplayConfiguration(mContext)
+                                .alwaysOnAvailableForUser(android.os.UserHandle.myUserId()))) {
+            return UNSUPPORTED_ON_DEVICE;
+        }
         return AVAILABLE;
     }
 
