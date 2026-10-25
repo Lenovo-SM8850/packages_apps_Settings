@@ -397,6 +397,11 @@
     <item msgid="3779092145391320375">"제한이 있는 Wi-Fi로 취급"</item>
     <item msgid="2047166446768045816">"무제한 Wi-Fi로 취급"</item>
   </string-array>
+    <string-array name="wifi_privacy_entries_ext">
+        <item>연결별 임의 MAC 사용(기본값)</item>
+        <item>네트워크별 임의 MAC 사용</item>
+        <item>기기 MAC 사용</item>
+    </string-array>
   <string-array name="wifi_privacy_entries">
     <item msgid="91222619458919148">"무작위로 지정된 MAC 사용"</item>
     <item msgid="741680937828608749">"기기 MAC 사용"</item>
@@ -477,6 +482,12 @@
     <item msgid="7025253383416830453">"1분 후"</item>
     <item msgid="1574040255478150028">"5분 후"</item>
   </string-array>
+    <string-array name="terms_of_address">
+        <item>지정 안 함</item>
+        <item>중성</item>
+        <item>여성</item>
+        <item>남성</item>
+    </string-array>
     <!-- no translation found for private_space_auto_lock_options:0 (551584871228110817) -->
     <!-- no translation found for private_space_auto_lock_options:1 (3263162333754809690) -->
     <!-- no translation found for private_space_auto_lock_options:2 (1575103586471380629) -->
@@ -522,6 +533,9 @@
     <item msgid="3022279986430275040">"반달"</item>
     <item msgid="5421089790869483206">"시계"</item>
   </string-array>
+    <string-array name="fingerprint_acquired_vendor">
+        <item>손가락이 움직이지 않음</item>
+    </string-array>
   <string-array name="display_over_apps_permission_change_exempt">
   </string-array>
   <string-array name="action_corner_action_titles">

@@ -397,6 +397,11 @@
     <item msgid="3779092145391320375">"視為計量付費"</item>
     <item msgid="2047166446768045816">"視為非計量付費"</item>
   </string-array>
+    <string-array name="wifi_privacy_entries_ext">
+        <item>使用每個連線的隨機 MAC (預設)</item>
+        <item>使用每個網路的隨機 MAC</item>
+        <item>使用裝置 MAC</item>
+    </string-array>
   <string-array name="wifi_privacy_entries">
     <item msgid="91222619458919148">"使用隨機 MAC"</item>
     <item msgid="741680937828608749">"使用裝置 MAC"</item>
@@ -477,6 +482,12 @@
     <item msgid="7025253383416830453">"1 分鐘後"</item>
     <item msgid="1574040255478150028">"5 分鐘後"</item>
   </string-array>
+    <string-array name="terms_of_address">
+        <item>未指定</item>
+        <item>普通</item>
+        <item>女性</item>
+        <item>男性</item>
+    </string-array>
     <!-- no translation found for private_space_auto_lock_options:0 (551584871228110817) -->
     <!-- no translation found for private_space_auto_lock_options:1 (3263162333754809690) -->
     <!-- no translation found for private_space_auto_lock_options:2 (1575103586471380629) -->
@@ -522,6 +533,9 @@
     <item msgid="3022279986430275040">"半月"</item>
     <item msgid="5421089790869483206">"時鐘"</item>
   </string-array>
+    <string-array name="fingerprint_acquired_vendor">
+        <item>手指未移動</item>
+    </string-array>
   <string-array name="display_over_apps_permission_change_exempt">
   </string-array>
   <string-array name="action_corner_action_titles">

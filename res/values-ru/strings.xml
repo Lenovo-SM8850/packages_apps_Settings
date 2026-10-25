@@ -1738,9 +1738,9 @@
     <string name="reset_private_space_delete_title" msgid="2555885198282572990">"Удалить частное пространство"</string>
     <string name="main_clear_title" msgid="277664302144837723">"Удалить все данные (сброс настроек)"</string>
     <string name="main_clear_short_title" msgid="4752094765533020696">"Удалить все данные (сброс настроек)"</string>
-    <string name="main_clear_desc_also_erases_external" msgid="3687911419628956693"><li>"музыка;"</li>\n<li>"фото;"</li>\n<li>"другие данные."</li></string>
+    <string name="main_clear_desc_also_erases_external"><li>Музыка</li>\n<li>Фото</li>\n<li>Другие данные пользователя</li></string>
     <string name="main_clear_desc_also_erases_esim" msgid="4553469876411831729"><li>"eSIM"</li></string>
-    <string name="main_clear_desc_no_cancel_mobile_plan" msgid="369883568059127035">\n\n"Вы не потеряете доступ к услугам оператора связи."</string>
+    <string name="main_clear_desc_no_cancel_mobile_plan">\n\nВаш тарифный план мобильной связи не будет отменён.</string>
     <string name="main_clear_final_desc" msgid="5800877928569039580">"Вся личная информация и скачанные приложения будут удалены. Это действие нельзя отменить."</string>
     <string name="main_clear_final_desc_esim" msgid="6592404057237813989">"Вся личная информация, в том числе данные eSIM-карт и скачанные приложения, будет удалена. Это действие нельзя отменить."</string>
     <string name="main_clear_confirm_title" msgid="6577071819657853713">"Удалить все данные?"</string>
@@ -2358,6 +2358,7 @@
     <string name="user_dict_settings_all_languages" msgid="8563387437755363526">"Для всех языков"</string>
     <string name="user_dict_settings_more_languages" msgid="5378870726809672319">"Другой язык"</string>
     <string name="testing" msgid="6294172343766732037">"Проверка"</string>
+    <string name="testing_sim_toolkit">SIM-меню</string>
     <string name="keyboard_settings_summary" msgid="5513613701144979051">"Приложения-клавиатуры и инструменты"</string>
     <string name="keyboard_settings_with_physical_keyboard_summary" msgid="449934856451727476">"Приложения-клавиатуры, инструменты и физические клавиатуры"</string>
     <string name="physical_keyboards_list_title" msgid="2062417895303139252">"Физические клавиатуры"</string>
@@ -3000,6 +3001,11 @@
     <string name="power_bluetooth" msgid="5085900180846238196">"Bluetooth"</string>
     <string name="power_cell" msgid="7793805106954398186">"Мобильная сеть"</string>
     <string name="power_phone" msgid="2768396619208561670">"Голосовые вызовы"</string>
+    <string name="power_audio">Аудио</string>
+    <string name="power_video">Видео</string>
+    <string name="power_sensors">Датчики</string>
+    <string name="power_memory">Память</string>
+    <string name="power_idle">Телефон в режиме ожидания</string>
     <string name="battery_screen_usage" msgid="90008745183187461">"Использование экрана: <xliff:g id="TIME">^1</xliff:g>"</string>
     <string name="battery_used_by" msgid="6457305178016189330">"<xliff:g id="PERCENT">%1$s</xliff:g> – <xliff:g id="APP">%2$s</xliff:g>"</string>
     <string name="battery_overall_usage" msgid="8940140259734182014">"<xliff:g id="PERCENT">%1$s</xliff:g> заряда батареи"</string>
@@ -3650,7 +3656,7 @@
     <string name="account_dashboard_title" msgid="8228773251948253914">"Пароли и аккаунты"</string>
     <string name="account_dashboard_default_summary" msgid="7976899924144356939">"Подсказки при входе и автозаполнение"</string>
     <string name="app_default_dashboard_title" msgid="4071015747629103216">"Приложения по умолчанию"</string>
-    <string name="cloned_apps_dashboard_title" msgid="5542076801222950921">"Клонирование приложений"</string>
+    <string name="cloned_apps_dashboard_title">Клонированные приложения</string>
     <string name="desc_cloned_apps_intro_text" msgid="1369621522882622476">"Создайте второй экземпляр приложения, чтобы одновременно использовать два аккаунта."</string>
     <string name="desc_cloneable_app_list_text" msgid="3354586725814708688">"Приложения, которые можно клонировать."</string>
     <string name="cloned_apps_summary" msgid="8805362440770795709">"Клонировано: <xliff:g id="CLONED_APPS_COUNT">%1$s</xliff:g>; доступно для клон-ия: <xliff:g id="ALLOWED_APPS_COUNT">%2$d</xliff:g>"</string>
@@ -4572,7 +4578,7 @@
     <string name="memory_usage" msgid="5594133403819880617">"Используемая память"</string>
     <string name="app_list_memory_use" msgid="3178720339027577869">"Приложения"</string>
     <string name="memory_details" msgid="6133226869214421347">"Подробности"</string>
-    <string name="memory_use_summary" msgid="3915964794146424142">"За последние 3 часа использовано <xliff:g id="SIZE">%1$s</xliff:g> памяти"</string>
+    <string name="memory_use_summary">Средний объём использованной памяти за последние 3 часа: <xliff:g id="size" example="30MB">%1$s</xliff:g></string>
     <string name="no_memory_use_summary" msgid="6708111974923274436">"За последние 3 часа приложение не обращалось к памяти"</string>
     <string name="sort_avg_use" msgid="4416841047669186903">"Упорядочить по средн. объему исп. памяти"</string>
     <string name="sort_max_use" msgid="3370552820889448484">"Упорядочить по макс. объему исп. памяти"</string>
@@ -5200,6 +5206,7 @@
     <string name="platform_compat_dashboard_summary" msgid="4036546607938791337">"Изменение настроек совместимости приложений"</string>
     <string name="platform_compat_default_enabled_title" msgid="8973137337738388024">"Изменения, включенные по умолчанию"</string>
     <string name="platform_compat_default_disabled_title" msgid="3975847180953793602">"Изменения, отключенные по умолчанию"</string>
+    <string name="platform_compat_target_sdk_title">Включено для targetSdkVersion <xliff:g id="number" example="29">%d</xliff:g> и выше</string>
     <string name="platform_compat_dialog_text_no_apps" msgid="5715226015751055812">"Настраивать изменение параметров совместимости можно только для приложений, доступных для отладки. Установите такое приложение и повторите попытку."</string>
     <string name="disabled_dependent_setting_summary" msgid="4508635725315852504">"Эту настройку нельзя изменить, так как она зависит от других параметров."</string>
     <string name="my_device_info_account_preference_title" msgid="9197139254007133175">"Аккаунт"</string>

@@ -2358,6 +2358,7 @@
     <string name="user_dict_settings_all_languages" msgid="8563387437755363526">"所有語言"</string>
     <string name="user_dict_settings_more_languages" msgid="5378870726809672319">"更多語言…"</string>
     <string name="testing" msgid="6294172343766732037">"測試中"</string>
+    <string name="testing_sim_toolkit">SIM 卡工具包</string>
     <string name="keyboard_settings_summary" msgid="5513613701144979051">"鍵盤應用程式、工具"</string>
     <string name="keyboard_settings_with_physical_keyboard_summary" msgid="449934856451727476">"鍵盤應用程式、實體鍵盤、工具"</string>
     <string name="physical_keyboards_list_title" msgid="2062417895303139252">"實體鍵盤"</string>
@@ -3000,6 +3001,11 @@
     <string name="power_bluetooth" msgid="5085900180846238196">"藍牙"</string>
     <string name="power_cell" msgid="7793805106954398186">"行動網路"</string>
     <string name="power_phone" msgid="2768396619208561670">"語音通話"</string>
+    <string name="power_audio">音訊</string>
+    <string name="power_video">影片</string>
+    <string name="power_sensors">感應器</string>
+    <string name="power_memory">記憶體</string>
+    <string name="power_idle">手機閒置</string>
     <string name="battery_screen_usage" msgid="90008745183187461">"螢幕使用時間：<xliff:g id="TIME">^1</xliff:g>"</string>
     <string name="battery_used_by" msgid="6457305178016189330">"<xliff:g id="APP">%2$s</xliff:g>用量佔 <xliff:g id="PERCENT">%1$s</xliff:g>"</string>
     <string name="battery_overall_usage" msgid="8940140259734182014">"整體電量的 <xliff:g id="PERCENT">%1$s</xliff:g>"</string>
@@ -4572,7 +4578,7 @@
     <string name="memory_usage" msgid="5594133403819880617">"記憶體用量"</string>
     <string name="app_list_memory_use" msgid="3178720339027577869">"應用程式記憶體用量"</string>
     <string name="memory_details" msgid="6133226869214421347">"詳細資料"</string>
-    <string name="memory_use_summary" msgid="3915964794146424142">"過去 3 小時平均記憶體用量為 <xliff:g id="SIZE">%1$s</xliff:g>"</string>
+    <string name="memory_use_summary">過去 3 小時的平均記憶體用量為 <xliff:g id="size" example="30MB">%1$s</xliff:g></string>
     <string name="no_memory_use_summary" msgid="6708111974923274436">"過去 3 小時未使用任何記憶體"</string>
     <string name="sort_avg_use" msgid="4416841047669186903">"依平均用量排序"</string>
     <string name="sort_max_use" msgid="3370552820889448484">"依最高用量排序"</string>
@@ -5200,6 +5206,7 @@
     <string name="platform_compat_dashboard_summary" msgid="4036546607938791337">"切換應用程式相容性變更"</string>
     <string name="platform_compat_default_enabled_title" msgid="8973137337738388024">"預設啟用的應用程式有相容性異動"</string>
     <string name="platform_compat_default_disabled_title" msgid="3975847180953793602">"預設停用的應用程式有相容性異動"</string>
+    <string name="platform_compat_target_sdk_title">targetSdkVersion 為 <xliff:g id="number" example="29">%d</xliff:g> 以上時啟用</string>
     <string name="platform_compat_dialog_text_no_apps" msgid="5715226015751055812">"你只能修改可偵錯應用程式的應用程式相容性變更。請安裝可進行偵錯的應用程式，然後再試一次。"</string>
     <string name="disabled_dependent_setting_summary" msgid="4508635725315852504">"必須一併變更其他設定"</string>
     <string name="my_device_info_account_preference_title" msgid="9197139254007133175">"帳戶"</string>
@@ -5496,8 +5503,8 @@
     <string name="settings_panel_title" msgid="346363079938069215">"設定面板"</string>
     <string name="enable_desktop_mode" msgid="5644818402534562302">"啟用自由形式視窗"</string>
     <string name="enable_desktop_experience_features" msgid="7389235241021706660">"啟用電腦版服務功能"</string>
-    <string name="enable_desktop_experience_features_summary_with_desktop" msgid="8586716390362684564">"在裝置和次要螢幕上啟用電腦分割視窗。"</string>
-    <string name="enable_desktop_experience_features_summary_without_desktop" msgid="7567963048658976895">"在次要螢幕上啟用電腦分割視窗。"</string>
+    <string name="enable_desktop_experience_features_summary_with_desktop">在裝置和次要螢幕上啟用電腦分割視窗。</string>
+    <string name="enable_desktop_experience_features_summary_without_desktop">在次要螢幕上啟用電腦分割視窗。</string>
     <string name="enable_desktop_mode_on_secondary_display" msgid="2609567824593768780">"在第二個螢幕上啟用自由形式視窗功能"</string>
     <string name="enable_non_resizable_multi_window" msgid="6832903754625404477">"允許多視窗模式顯示無法調整大小的應用程式"</string>
     <string name="enable_non_resizable_multi_window_summary" msgid="3275763753261901999">"允許透過多視窗模式顯示無法調整大小的應用程式"</string>

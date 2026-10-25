@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2025 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="installed_app_detail_settings_screen_purpose">Предоставляет подробную информацию об установленном приложении и параметры управления им, включая разрешения, хранилище, уведомления и состояние.</string>
+    <string name="installed_app_detail_unused_apps_switch_purpose">Если включено, при длительном неиспользовании приложения будут отозваны разрешения, удалены временные файлы, отключены уведомления, а само приложение будет архивировано.</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_disabled_globally">Функция «Приостановить работу в неактивный период» сейчас отключена на уровне устройства.</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_archived_app">Архивированные приложения нельзя обрабатывать как неиспользуемые.</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_exempt_app">Это приложение является важной системной программой и не подпадает под действие функции «Приостановить работу в неактивный период».</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_null_app">Указанное приложение не найдено на устройстве.</string>
+    <string name="non_carrier_app_data_usage_screen_purpose">Показывает объём данных, использованных приложением через мобильную сеть и Wi-Fi.</string>
+</resources>

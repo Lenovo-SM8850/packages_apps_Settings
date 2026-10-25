@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2025 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="installed_app_detail_settings_screen_purpose">指定したインストール済みアプリについて、権限、ストレージ、通知、状態などの詳細情報と管理オプションを提供します。</string>
+    <string name="installed_app_detail_unused_apps_switch_purpose">有効にすると、アプリを長期間使用しなかった場合に、権限の削除、一時ファイルの削除、通知の停止、アプリのアーカイブを行います。</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_disabled_globally">「使用していないアプリを管理する」機能は、現在デバイスレベルで無効になっています。</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_archived_app">アーカイブされたアプリを未使用アプリとして管理することはできません。</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_exempt_app">このアプリは重要なシステムアプリであるため、「使用していないアプリを管理する」機能の対象外です。</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_null_app">指定したアプリがデバイス上に見つかりませんでした。</string>
+    <string name="non_carrier_app_data_usage_screen_purpose">アプリがモバイルデータと Wi-Fi 接続で使用したデータ量を表示します。</string>
+</resources>

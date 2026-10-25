@@ -15,94 +15,94 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="keyboard_extras_title">その他</string>
-    <string name="advanced_keyboard_settings_title">高度な設定</string>
-    <string name="adb_enable_root">ルート状態でのデバッグ</string>
-    <string name="adb_enable_summary_root">ルート状態でも Android デバッグを許可する</string>
-    <string name="backup_transport_setting_label">バックアップ プロバイダの変更</string>
-    <string name="backup_transport_title">バックアップ プロバイダの選択</string>
+    <string name="keyboard_extras_title">追加機能</string>
+    <string name="advanced_keyboard_settings_title">詳細設定</string>
+    <string name="adb_enable_root">root デバッグ</string>
+    <string name="adb_enable_summary_root">Android デバッグを root として実行することを許可します</string>
+    <string name="backup_transport_setting_label">バックアップ プロバイダを変更</string>
+    <string name="backup_transport_title">バックアップ プロバイダを選択</string>
     <string name="berry_black_theme_title">ピュアブラック</string>
-    <string name="berry_black_theme_summary">ダークテーマ時に背景をピュアブラックにする</string>
-    <string name="lineagelicense_title">LineageOS 利用規約</string>
+    <string name="berry_black_theme_summary">ダークテーマの背景を純黒にします</string>
+    <string name="lineagelicense_title">LineageOS の法的情報</string>
     <string name="show_dev_countdown_cm">{count, plural,
-      =1      {開発者向けオプションを有効化するまであと#ステップです}
-      other   {開発者向けオプションを有効化するまであと#ステップです}
+      =1      {開発者向けオプションが有効になるまで、あと # ステップです。}
+      other   {開発者向けオプションが有効になるまで、あと # ステップです。}
     }</string>
-    <string name="show_dev_on_cm">開発者向けオプションが有効になりました。</string>
+    <string name="show_dev_on_cm">開発者向けオプションを有効にしました。</string>
     <string name="show_dev_already_cm">必要ありません、開発者向けオプションは既に有効になっています。</string>
-    <string name="status_bar_double_tap_to_sleep_title">ロック画面をタップしてスリープ状態にする</string>
-    <string name="status_bar_double_tap_to_sleep_summary">ステータスバーかロックスクリーンをダブルタップしてディスプレイを消灯します</string>
-    <string name="high_touch_polling_rate_title">ポーリング速度の高速化</string>
-    <string name="high_touch_polling_rate_summary">タッチスクリーンのポーリング速度を上げます</string>
-    <string name="heads_up_notifications_enabled_title">ヘッドアップ</string>
-    <string name="heads_up_notifications_enabled_summary">小さなフローティングウインドウに重要な通知を表示します</string>
-    <string name="high_touch_sensitivity_title">高感度タッチ</string>
-    <string name="high_touch_sensitivity_summary">手袋を着けたまま使用できるようにタッチ画面の感度を向上させる</string>
-    <string name="tethering_allow_vpn_upstreams_title">接続されたデバイスに VPN を使用する</string>
-    <string name="tethering_allow_vpn_upstreams_summary">このデバイスが VPN を使用している場合、テザリング中のすべてのデバイスは同じ VPN を使用します</string>
-    <string name="lock_settings_picker_pattern_size_message">パターンサイズを選択してください</string>
-    <string name="lockpattern_settings_enable_error_path_title">間違えたパターンを表示</string>
+    <string name="status_bar_double_tap_to_sleep_title">タップでスリープ</string>
+    <string name="status_bar_double_tap_to_sleep_summary">ステータスバーまたはロック画面をダブルタップして、画面を OFF にします</string>
+    <string name="high_touch_polling_rate_title">高タッチ サンプリング レート</string>
+    <string name="high_touch_polling_rate_summary">タッチ操作への反応が速くなります。</string>
+    <string name="heads_up_notifications_enabled_title">ヘッドアップ通知</string>
+    <string name="heads_up_notifications_enabled_summary">優先度の高い通知を小さなフローティング ウィンドウで表示します</string>
+    <string name="high_touch_sensitivity_title">タッチ感度を高くする</string>
+    <string name="high_touch_sensitivity_summary">タッチスクリーンの感度を上げて、手袋をしたままでも操作できるようにします</string>
+    <string name="tethering_allow_vpn_upstreams_title">接続したデバイスで VPN を使用</string>
+    <string name="tethering_allow_vpn_upstreams_summary">このデバイスで VPN を使用している場合、アクセス ポイントに接続されたすべてのデバイスが同じ VPN を使用します</string>
+    <string name="lock_settings_picker_pattern_size_message">パターンのサイズを選択</string>
+    <string name="lockpattern_settings_enable_error_path_title">パターンのエラーを表示</string>
     <string name="lockpattern_settings_enable_dots_title">パターンのドットを表示</string>
-    <string name="max_refresh_rate_title">最高リフレッシュレート</string>
-    <string name="min_refresh_rate_title">最小リフレッシュレート</string>
+    <string name="max_refresh_rate_title">最大リフレッシュ レート</string>
+    <string name="min_refresh_rate_title">最小リフレッシュ レート</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">端末前面にある指紋認証センサーを探してください</string>
     <string name="fingerprint_enroll_find_sensor_message_front" product="device">端末前面にある指紋認証センサーを探してください</string>
-    <string name="fingerprint_enroll_find_sensor_message_front" product="default">端末前面にある指紋認証センサーを探してください</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="default">スマートフォンの前面にある指紋認証センサーを探してください。</string>
     <string name="fingerprint_enroll_find_sensor_message_rear" product="tablet">端末背面にある指紋認証センサーを探してください</string>
     <string name="fingerprint_enroll_find_sensor_message_rear" product="device">端末背面にある指紋認証センサーを探してください</string>
-    <string name="fingerprint_enroll_find_sensor_message_rear" product="default">端末背面にある指紋認証センサーを探してください</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="default">スマートフォンの背面にある指紋認証センサーを探してください。</string>
     <string name="fingerprint_enroll_find_sensor_message_side" product="tablet">端末側面にある指紋認証センサーを探してください</string>
     <string name="fingerprint_enroll_find_sensor_message_side" product="device">端末側面にある指紋認証センサーを探してください</string>
-    <string name="fingerprint_enroll_find_sensor_message_side" product="default">端末側面にある指紋認証センサーを探してください</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="default">スマートフォンの側面にある指紋認証センサーを探してください。</string>
     <string name="fingerprint_enroll_touch_dialog_message_front" product="tablet">端末前面にある指紋認証センサーをタッチしてください</string>
     <string name="fingerprint_enroll_touch_dialog_message_front" product="device">端末前面にある指紋認証センサーをタッチしてください</string>
-    <string name="fingerprint_enroll_touch_dialog_message_front" product="default">端末前面にある指紋認証センサーをタッチしてください</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="default">スマートフォンの前面にあるセンサーに触れてください。</string>
     <string name="fingerprint_enroll_touch_dialog_message_rear" product="tablet">端末背面にある指紋認証センサーをタッチしてください</string>
     <string name="fingerprint_enroll_touch_dialog_message_rear" product="device">端末背面にある指紋認証センサーをタッチしてください</string>
-    <string name="fingerprint_enroll_touch_dialog_message_rear" product="default">端末背面にある指紋認証センサーをタッチしてください</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="default">スマートフォンの背面にあるセンサーに触れてください。</string>
     <string name="fingerprint_enroll_touch_dialog_message_side" product="tablet">端末側面にある指紋認証センサーをタッチしてください</string>
     <string name="fingerprint_enroll_touch_dialog_message_side" product="device">端末側面にある指紋認証センサーをタッチしてください</string>
-    <string name="fingerprint_enroll_touch_dialog_message_side" product="default">端末側面にある指紋認証センサーをタッチしてください</string>
-    <string name="show_navbar_hint_title">ナビゲーションバーのヒント</string>
-    <string name="show_navbar_hint_summary">画面下部にナビゲーションバーのヒントを表示します</string>
-    <string name="auto_brightness_one_shot_title">画面点灯時にのみ適用する</string>
-    <string name="auto_brightness_one_shot_summary">画面が点灯した時に一度だけ自動で画面の明るさ調整を行います</string>
-    <string name="data_usage_app_restrict_all">ネットワークアクセスを許可する</string>
-    <string name="data_usage_app_restrict_all_summary">ネットワークの使用状況を有効化する</string>
-    <string name="data_usage_app_restrict_mobile">モバイルデータ通信</string>
-    <string name="data_usage_app_restrict_mobile_summary">モバイルデータ使用量を有効化する</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="default">スマートフォンの側面にあるセンサーに触れてください。</string>
+    <string name="show_navbar_hint_title">ナビゲーション ヒント</string>
+    <string name="show_navbar_hint_summary">画面の下部にナビゲーション ヒント バーを表示します</string>
+    <string name="auto_brightness_one_shot_title">明るさの自動調節（1 回のみ）</string>
+    <string name="auto_brightness_one_shot_summary">画面を ON にした瞬間にのみ明るさを調整します</string>
+    <string name="data_usage_app_restrict_all">ネットワーク アクセスを許可</string>
+    <string name="data_usage_app_restrict_all_summary">ネットワークの使用を許可します</string>
+    <string name="data_usage_app_restrict_mobile">モバイルデータ</string>
+    <string name="data_usage_app_restrict_mobile_summary">モバイルデータの使用を許可します</string>
     <string name="data_usage_app_restrict_vpn">VPN データ</string>
-    <string name="data_usage_app_restrict_vpn_summary">VPN データ使用量を有効化する</string>
-    <string name="data_usage_app_restrict_wifi">Wi\u2011Fi データ使用量</string>
-    <string name="data_usage_app_restrict_wifi_summary">Wi\u2011Fi データ使用量を有効化します</string>
-    <string name="unlock_scramble_pin_layout_title">スクランブルレイアウト</string>
-    <string name="unlock_scramble_pin_layout_summary">端末のロック解除時にPINレイアウトをランダムにする</string>
-    <string name="proximity_wake_title">誤作動を防止</string>
-    <string name="proximity_wake_summary">スリープ解除する前に接近センサーで確認する</string>
-    <string name="touchscreen_hovering_title">タッチ画面のホバリング</string>
-    <string name="touchscreen_hovering_summary">ウェブブラウザやリモードデスクトップなどでマウスのようにホバリングできるようにする</string>
+    <string name="data_usage_app_restrict_vpn_summary">VPN データの使用を許可します</string>
+    <string name="data_usage_app_restrict_wifi">Wi-Fi データ</string>
+    <string name="data_usage_app_restrict_wifi_summary">Wi-Fi データの使用を許可します</string>
+    <string name="unlock_scramble_pin_layout_title">配列をシャッフル</string>
+    <string name="unlock_scramble_pin_layout_summary">デバイスのロック解除時に PIN の配列をシャッフルします</string>
+    <string name="proximity_wake_title">誤ったスリープ解除を防止</string>
+    <string name="proximity_wake_summary">画面を ON にする前に近接センサーを確認します</string>
+    <string name="touchscreen_hovering_title">タッチスクリーンのホバー</string>
+    <string name="touchscreen_hovering_summary">ウェブブラウザやリモート デスクトップなどで、マウスのように画面上でホバー操作ができます</string>
     <string name="wake_when_plugged_or_unplugged_title">接続時にスリープ解除</string>
-    <string name="wake_when_plugged_or_unplugged_summary">電源を接続または切断したときに画面を点灯します</string>
-    <string name="storage_warning_internal">警告: このオプションは正常に動作しなかったりデータの消失に繋がる可能性があるため推奨しません！</string>
+    <string name="wake_when_plugged_or_unplugged_summary">電源の接続時または切断時に画面を ON にします</string>
+    <string name="storage_warning_internal">警告: このオプションは正常に動作しない場合やデータが失われる可能性があるため、おすすめしません。</string>
     <string name="assisted_gps">A-GPS を使用</string>
-    <string name="assisted_gps_summary">GPS 始動時のパフォーマンスを大幅に向上できる衛星支援データをインターネットからダウンロードします。緊急電話のために、アシスト GPS は常に許可されています。</string>
+    <string name="assisted_gps_summary">インターネットから衛星支援データをダウンロードして、GPS の起動性能を大幅に向上させます。緊急通報では、常に A-GPS が許可されます。</string>
     <string name="battery_technology">テクノロジー</string>
-    <string name="battery_health">健康度</string>
-    <string name="battery_health_good">良い</string>
-    <string name="battery_health_overheat">オーバーヒート</string>
-    <string name="battery_health_dead">死亡</string>
+    <string name="battery_health">状態</string>
+    <string name="battery_health_good">良好</string>
+    <string name="battery_health_overheat">過熱</string>
+    <string name="battery_health_dead">寿命</string>
     <string name="battery_health_over_voltage">過電圧</string>
-    <string name="battery_health_unspecified_failure">不明な問題</string>
-    <string name="battery_health_cold">冷たい</string>
+    <string name="battery_health_unspecified_failure">原因不明の障害</string>
+    <string name="battery_health_cold">低温</string>
     <string name="battery_health_unknown">不明</string>
     <string name="battery_temperature">温度</string>
     <string name="battery_voltage">電圧</string>
     <string name="battery_charge_counter_summary">%1$d mAh</string>
-    <string name="battery_design_capacity">設計最大容量</string>
+    <string name="battery_design_capacity">設計容量</string>
     <string name="battery_design_capacity_summary">%1$d mAh</string>
     <string name="battery_maximum_capacity">最大容量</string>
-    <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
-    <string name="face_enrolling_close_to_continue">セットアップ中はデバイスを折りたたんでください</string>
+    <string name="battery_maximum_capacity_summary">%1$d mAh（%2$d%%）</string>
+    <string name="face_enrolling_close_to_continue">設定中にデバイスを折りたたむ</string>
     <string name="face_enrolling_close_to_continue_description">顔認証を設定または使用するには、デバイスを折りたたむ必要があります。</string>
     <string name="face_enrolling_do_it_later">後で行う</string>
 </resources>

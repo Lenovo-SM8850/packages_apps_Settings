@@ -397,6 +397,11 @@
     <item msgid="3779092145391320375">"С тарификацией"</item>
     <item msgid="2047166446768045816">"Без тарификации"</item>
   </string-array>
+    <string-array name="wifi_privacy_entries_ext">
+        <item>Использовать случайный MAC-адрес для каждого подключения (по умолчанию)</item>
+        <item>Использовать случайный MAC-адрес для каждой сети</item>
+        <item>Использовать MAC-адрес устройства</item>
+    </string-array>
   <string-array name="wifi_privacy_entries">
     <item msgid="91222619458919148">"Случайный MAC-адрес"</item>
     <item msgid="741680937828608749">"MAC-адрес устройства"</item>
@@ -477,6 +482,12 @@
     <item msgid="7025253383416830453">"Через 1 минуту"</item>
     <item msgid="1574040255478150028">"Через 5 минут"</item>
   </string-array>
+    <string-array name="terms_of_address">
+        <item>Не указано</item>
+        <item>Нейтральные</item>
+        <item>В женском роде</item>
+        <item>В мужском роде</item>
+    </string-array>
     <!-- no translation found for private_space_auto_lock_options:0 (551584871228110817) -->
     <!-- no translation found for private_space_auto_lock_options:1 (3263162333754809690) -->
     <!-- no translation found for private_space_auto_lock_options:2 (1575103586471380629) -->
@@ -522,6 +533,9 @@
     <item msgid="3022279986430275040">"Полумесяц"</item>
     <item msgid="5421089790869483206">"Часы"</item>
   </string-array>
+    <string-array name="fingerprint_acquired_vendor">
+        <item>Палец не двигается</item>
+    </string-array>
   <string-array name="display_over_apps_permission_change_exempt">
   </string-array>
   <string-array name="action_corner_action_titles">

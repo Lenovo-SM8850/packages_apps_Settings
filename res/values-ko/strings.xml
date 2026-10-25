@@ -936,8 +936,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"디스플레이 간에 마우스 이동"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"외부 디스플레이 사용"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"디스플레이 해상도"</string>
-    <string name="external_display_resolution_refresh_rate_settings_title" msgid="4331709890849304277">"해상도 및 화면 재생 빈도"</string>
-    <string name="external_display_refresh_rate_title" msgid="6326813722241312213">"화면 재생 빈도"</string>
+    <string name="external_display_resolution_refresh_rate_settings_title" msgid="4331709890849304277">"해상도 및 화면 주사율"</string>
+    <string name="external_display_refresh_rate_title" msgid="6326813722241312213">"화면 주사율"</string>
     <string name="external_display_resolution_title" msgid="124681567143280861">"해상도"</string>
     <string name="external_display_connection_preference" msgid="3337612335495542718">"기본 연결 동작"</string>
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"별도 디스플레이로 사용"</string>
@@ -999,8 +999,8 @@
     <string name="wifi_ask_disable" msgid="1663208096020309639">"<xliff:g id="REQUESTER">%s</xliff:g>에서 Wi-Fi를 사용 중지하려고 합니다."</string>
     <string name="art_verifier_for_debuggable_title" msgid="1926445785190030479">"디버깅 가능한 앱의 바이트 코드 확인"</string>
     <string name="art_verifier_for_debuggable_summary" msgid="4802875841862652879">"ART가 디버깅 가능한 앱의 바이트 코드를 확인하도록 허용"</string>
-    <string name="show_refresh_rate" msgid="5742688821872354973">"새로고침 빈도 보기"</string>
-    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"현재 화면 새로고침 빈도 보기"</string>
+    <string name="show_refresh_rate" msgid="5742688821872354973">"주사율 보기"</string>
+    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"현재 화면 주사율 보기"</string>
     <string name="show_hdr_sdr_ratio" msgid="4188007289024955585">"HDR/SDR 비율 표시"</string>
     <string name="show_hdr_sdr_ratio_summary" msgid="986292785096013733">"현재 HDR/SDR 비율 표시"</string>
     <string name="nfc_quick_toggle_title" msgid="3607620705230351666">"NFC"</string>
@@ -1362,9 +1362,9 @@
     <string name="disable_game_default_frame_rate_title" msgid="3712908601744143753">"게임 기본 프레임 속도 사용 중지"</string>
     <string name="disable_game_default_frame_rate_summary" msgid="4436762704707434225">"게임 최대 프레임 속도 <xliff:g id="FRAME_RATE">%1$d</xliff:g>Hz 제한을 사용 중지합니다."</string>
     <string name="peak_refresh_rate_title" msgid="2056355754210341011">"스무스 디스플레이"</string>
-    <string name="peak_refresh_rate_summary" msgid="3212309985294885790">"일부 콘텐츠의 화면 재생 빈도를 자동으로 최대 <xliff:g id="ID_1">%1$d</xliff:g>Hz까지 늘립니다. 배터리 사용량이 증가합니다."</string>
-    <string name="force_high_refresh_rate_toggle" msgid="3325789621928312050">"가장 높은 새로고침 빈도 강제 적용"</string>
-    <string name="force_high_refresh_rate_desc" msgid="7794566420873814875">"향상된 터치 반응 속도 및 애니메이션 품질에 맞는 가장 높은 새로고침 빈도입니다. 배터리 사용량이 증가합니다."</string>
+    <string name="peak_refresh_rate_summary" msgid="3212309985294885790">"일부 콘텐츠의 화면 주사율을 자동으로 최대 <xliff:g id="ID_1">%1$d</xliff:g>Hz까지 늘립니다. 배터리 사용량이 증가합니다."</string>
+    <string name="force_high_refresh_rate_toggle" msgid="3325789621928312050">"가장 높은 주사율 강제 적용"</string>
+    <string name="force_high_refresh_rate_desc" msgid="7794566420873814875">"향상된 터치 반응 속도 및 애니메이션 품질에 맞는 가장 높은 주사율입니다. 배터리 사용량이 증가합니다."</string>
     <string name="adaptive_sleep_title" msgid="2987961991423539233">"화면 시선 감지"</string>
     <string name="adaptive_sleep_title_no_permission" msgid="1719759921214237016">"카메라 액세스 권한 필요"</string>
     <string name="adaptive_sleep_summary_no_permission" msgid="5822591289468803691">"화면 시선 감지를 사용하려면 카메라 액세스 권한이 필요합니다. 탭하여 기기 맞춤설정 서비스의 권한을 관리하세요"</string>
@@ -1740,7 +1740,7 @@
     <string name="main_clear_short_title" msgid="4752094765533020696">"모든 데이터 삭제(초기화)"</string>
     <string name="main_clear_desc_also_erases_external" msgid="3687911419628956693"><li>"음악"</li>\n<li>"사진"</li>\n<li>"기타 사용자 데이터"</li></string>
     <string name="main_clear_desc_also_erases_esim" msgid="4553469876411831729"><li>"eSIM"</li></string>
-    <string name="main_clear_desc_no_cancel_mobile_plan" msgid="369883568059127035">\n\n"모바일 서비스 요금제는 취소되지 않습니다."</string>
+    <string name="main_clear_desc_no_cancel_mobile_plan">\n\n모바일 서비스 요금제는 해지되지 않습니다.</string>
     <string name="main_clear_final_desc" msgid="5800877928569039580">"모든 개인 정보와 다운로드한 앱이 삭제됩니다. 이 작업은 실행취소할 수 없습니다."</string>
     <string name="main_clear_final_desc_esim" msgid="6592404057237813989">"다운로드한 앱 및 eSIM을 포함한 모든 개인 정보가 삭제됩니다. 이 작업은 실행취소할 수 없습니다."</string>
     <string name="main_clear_confirm_title" msgid="6577071819657853713">"모든 데이터를 삭제하시겠습니까?"</string>
@@ -2358,6 +2358,7 @@
     <string name="user_dict_settings_all_languages" msgid="8563387437755363526">"모든 언어로 설정"</string>
     <string name="user_dict_settings_more_languages" msgid="5378870726809672319">"다른 언어"</string>
     <string name="testing" msgid="6294172343766732037">"테스트 중"</string>
+    <string name="testing_sim_toolkit">SIM 툴킷</string>
     <string name="keyboard_settings_summary" msgid="5513613701144979051">"키보드 앱, 도구"</string>
     <string name="keyboard_settings_with_physical_keyboard_summary" msgid="449934856451727476">"키보드 앱, 물리적 키보드, 도구"</string>
     <string name="physical_keyboards_list_title" msgid="2062417895303139252">"물리적 키보드"</string>
@@ -3000,6 +3001,11 @@
     <string name="power_bluetooth" msgid="5085900180846238196">"블루투스"</string>
     <string name="power_cell" msgid="7793805106954398186">"모바일 네트워크"</string>
     <string name="power_phone" msgid="2768396619208561670">"음성 통화"</string>
+    <string name="power_audio">오디오</string>
+    <string name="power_video">동영상</string>
+    <string name="power_sensors">센서</string>
+    <string name="power_memory">메모리</string>
+    <string name="power_idle">휴대전화 유휴 상태</string>
     <string name="battery_screen_usage" msgid="90008745183187461">"화면 사용 시간: <xliff:g id="TIME">^1</xliff:g>"</string>
     <string name="battery_used_by" msgid="6457305178016189330">"<xliff:g id="APP">%2$s</xliff:g>에서 <xliff:g id="PERCENT">%1$s</xliff:g> 사용"</string>
     <string name="battery_overall_usage" msgid="8940140259734182014">"전체 배터리 사용량의 <xliff:g id="PERCENT">%1$s</xliff:g>"</string>
@@ -3650,7 +3656,7 @@
     <string name="account_dashboard_title" msgid="8228773251948253914">"비밀번호 및 계정"</string>
     <string name="account_dashboard_default_summary" msgid="7976899924144356939">"로그인 및 자동 완성 추천"</string>
     <string name="app_default_dashboard_title" msgid="4071015747629103216">"기본 앱"</string>
-    <string name="cloned_apps_dashboard_title" msgid="5542076801222950921">"복제 앱"</string>
+    <string name="cloned_apps_dashboard_title">복제된 앱</string>
     <string name="desc_cloned_apps_intro_text" msgid="1369621522882622476">"두 계정을 동시에 사용할 수 있도록 앱의 추가 인스턴스를 만드세요."</string>
     <string name="desc_cloneable_app_list_text" msgid="3354586725814708688">"복제할 수 있는 앱입니다."</string>
     <string name="cloned_apps_summary" msgid="8805362440770795709">"<xliff:g id="CLONED_APPS_COUNT">%1$s</xliff:g>개 복제됨, <xliff:g id="ALLOWED_APPS_COUNT">%2$d</xliff:g>개 복제 가능"</string>
@@ -3771,7 +3777,7 @@
     <string name="keywords_always_show_time_info" msgid="1066752498285497595">"화면 보호 모드 상시 사용 설정(AOD)"</string>
     <string name="keywords_change_nfc_tag_apps_state" msgid="9032287964590554366">"nfc, 태그, 리더"</string>
     <string name="keywords_keyboard_vibration" msgid="5870649353180725920">"키보드, 햅틱, 진동, 입력"</string>
-    <string name="keywords_external_display_settings" msgid="4717990369488386495">"외부 디스플레이, 연결된 디스플레이, 확장 디스플레이, 두 번째 디스플레이, 내장 디스플레이, 디스플레이 정렬, 미러링, 디스플레이 크기, 회전, 해상도, 화면 재생 빈도"</string>
+    <string name="keywords_external_display_settings" msgid="4717990369488386495">"외부 디스플레이, 연결된 디스플레이, 확장 디스플레이, 두 번째 디스플레이, 내장 디스플레이, 디스플레이 정렬, 미러링, 디스플레이 크기, 회전, 해상도, 화면 주사율"</string>
     <string name="keywords_text_cursor_blink_rate" msgid="7682963763334011148">"캐럿, 텍스트 캐럿, 텍스트 커서, 커서, 깜박임, 깜박임 간격, 깜박임 속도, 애니메이션, 애니메이션 줄이기, 애니메이션 삭제"</string>
     <string name="sound_dashboard_summary" msgid="8254699132423665654">"볼륨 및 진동"</string>
     <string name="media_volume_option_title" msgid="5966569685119475630">"미디어 볼륨"</string>
@@ -4572,7 +4578,7 @@
     <string name="memory_usage" msgid="5594133403819880617">"메모리 사용량"</string>
     <string name="app_list_memory_use" msgid="3178720339027577869">"앱 사용"</string>
     <string name="memory_details" msgid="6133226869214421347">"세부정보"</string>
-    <string name="memory_use_summary" msgid="3915964794146424142">"지난 3시간 동안 평균 메모리 사용량: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
+    <string name="memory_use_summary">최근 3시간 동안 평균 <xliff:g id="size" example="30MB">%1$s</xliff:g>의 메모리를 사용했습니다.</string>
     <string name="no_memory_use_summary" msgid="6708111974923274436">"지난 3시간 동안 메모리 사용량: 없음"</string>
     <string name="sort_avg_use" msgid="4416841047669186903">"평균 사용량 기준 정렬"</string>
     <string name="sort_max_use" msgid="3370552820889448484">"최대 사용량 기준 정렬"</string>
@@ -5200,6 +5206,7 @@
     <string name="platform_compat_dashboard_summary" msgid="4036546607938791337">"앱 호환성 변경사항 전환"</string>
     <string name="platform_compat_default_enabled_title" msgid="8973137337738388024">"기본적으로 사용 설정된 앱의 변경사항"</string>
     <string name="platform_compat_default_disabled_title" msgid="3975847180953793602">"기본적으로 사용 중지된 앱의 변경사항"</string>
+    <string name="platform_compat_target_sdk_title">targetSdkVersion <xliff:g id="number" example="29">%d</xliff:g> 이상에서 사용</string>
     <string name="platform_compat_dialog_text_no_apps" msgid="5715226015751055812">"디버그 가능한 앱의 경우에만 앱 호환성 변경사항을 수정할 수 있습니다. 디버그 가능한 앱을 설치하고 다시 시도해 보세요."</string>
     <string name="disabled_dependent_setting_summary" msgid="4508635725315852504">"다른 설정을 변경해야 함"</string>
     <string name="my_device_info_account_preference_title" msgid="9197139254007133175">"계정"</string>
@@ -5496,8 +5503,8 @@
     <string name="settings_panel_title" msgid="346363079938069215">"설정 패널"</string>
     <string name="enable_desktop_mode" msgid="5644818402534562302">"자유 형식 창 사용"</string>
     <string name="enable_desktop_experience_features" msgid="7389235241021706660">"데스크톱 환경 기능 사용 설정"</string>
-    <string name="enable_desktop_experience_features_summary_with_desktop" msgid="8586716390362684564">"기기 및 보조 디스플레이에서 데스크톱 윈도잉을 사용 설정합니다."</string>
-    <string name="enable_desktop_experience_features_summary_without_desktop" msgid="7567963048658976895">"보조 디스플레이에서 데스크톱 창 모드를 사용 설정합니다."</string>
+    <string name="enable_desktop_experience_features_summary_with_desktop">기기 및 보조 디스플레이에서 데스크톱 창 모드를 사용 설정합니다.</string>
+    <string name="enable_desktop_experience_features_summary_without_desktop">보조 디스플레이에서 데스크톱 창 모드를 사용 설정합니다.</string>
     <string name="enable_desktop_mode_on_secondary_display" msgid="2609567824593768780">"보조 디스플레이에서 자유 형식 창을 사용하도록 설정"</string>
     <string name="enable_non_resizable_multi_window" msgid="6832903754625404477">"멀티 윈도우에서 크기 조정 불가 앱 사용"</string>
     <string name="enable_non_resizable_multi_window_summary" msgid="3275763753261901999">"멀티 윈도우에서 크기 조정 불가 앱 허용"</string>
@@ -5838,7 +5845,7 @@
     <string name="user_aspect_ratio_16_9" msgid="2286644872775170164">"16:9"</string>
     <string name="user_aspect_ratio_3_2" msgid="199262962518318932">"3:2"</string>
     <string name="user_aspect_ratio_4_3" msgid="5196232982878982220">"4:3"</string>
-    <string name="user_aspect_ratio_option_a11y" msgid="1235801996029095219">"<xliff:g id="NUMERATOR">%1$s</xliff:g> 대 <xliff:g id="DENOMINATOR">%2$s</xliff:g>"</string>
+    <string name="user_aspect_ratio_option_a11y"><xliff:g id="numerator">%1$s</xliff:g> 대 <xliff:g id="denominator">%2$s</xliff:g></string>
     <string name="app_aspect_ratio_footer" msgid="4029509301182067475">"가로세로 비율을 변경하면 앱이 다시 시작됩니다. 저장하지 않은 변경사항은 손실될 수 있습니다. 일부 앱은 특정 가로세로 비율에 최적화되어 있지 않을 수 있습니다."</string>
     <string name="app_info_experience_category" msgid="6283332744508784886">"경험"</string>
     <string name="virtual_gamepad_title" msgid="8888343036739485679">"가상 게임패드"</string>

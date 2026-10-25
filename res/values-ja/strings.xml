@@ -2358,6 +2358,7 @@
     <string name="user_dict_settings_all_languages" msgid="8563387437755363526">"すべての言語用"</string>
     <string name="user_dict_settings_more_languages" msgid="5378870726809672319">"その他の言語..."</string>
     <string name="testing" msgid="6294172343766732037">"テスト中"</string>
+    <string name="testing_sim_toolkit">SIM ツールキット</string>
     <string name="keyboard_settings_summary" msgid="5513613701144979051">"キーボード アプリ、ツール"</string>
     <string name="keyboard_settings_with_physical_keyboard_summary" msgid="449934856451727476">"キーボード アプリ、物理キーボード、ツール"</string>
     <string name="physical_keyboards_list_title" msgid="2062417895303139252">"物理キーボード"</string>
@@ -3000,6 +3001,11 @@
     <string name="power_bluetooth" msgid="5085900180846238196">"Bluetooth"</string>
     <string name="power_cell" msgid="7793805106954398186">"モバイル ネットワーク"</string>
     <string name="power_phone" msgid="2768396619208561670">"通話"</string>
+    <string name="power_audio">オーディオ</string>
+    <string name="power_video">動画</string>
+    <string name="power_sensors">センサー</string>
+    <string name="power_memory">メモリ</string>
+    <string name="power_idle">スマートフォン待機中</string>
     <string name="battery_screen_usage" msgid="90008745183187461">"画面の使用: <xliff:g id="TIME">^1</xliff:g>"</string>
     <string name="battery_used_by" msgid="6457305178016189330">"<xliff:g id="PERCENT">%1$s</xliff:g>: <xliff:g id="APP">%2$s</xliff:g>"</string>
     <string name="battery_overall_usage" msgid="8940140259734182014">"バッテリー使用量全体の <xliff:g id="PERCENT">%1$s</xliff:g>"</string>
@@ -4572,7 +4578,7 @@
     <string name="memory_usage" msgid="5594133403819880617">"メモリ使用量"</string>
     <string name="app_list_memory_use" msgid="3178720339027577869">"アプリによる使用状況"</string>
     <string name="memory_details" msgid="6133226869214421347">"詳細"</string>
-    <string name="memory_use_summary" msgid="3915964794146424142">"過去3時間の平均メモリ使用量: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
+    <string name="memory_use_summary">過去 3 時間の平均メモリ使用量: <xliff:g id="size" example="30MB">%1$s</xliff:g></string>
     <string name="no_memory_use_summary" msgid="6708111974923274436">"過去3時間のメモリ使用量: なし"</string>
     <string name="sort_avg_use" msgid="4416841047669186903">"平均使用で並べ替え"</string>
     <string name="sort_max_use" msgid="3370552820889448484">"最大使用で並べ替え"</string>
@@ -5200,6 +5206,7 @@
     <string name="platform_compat_dashboard_summary" msgid="4036546607938791337">"「アプリの互換性の変更」を切り替えます"</string>
     <string name="platform_compat_default_enabled_title" msgid="8973137337738388024">"デフォルトで有効な変更"</string>
     <string name="platform_compat_default_disabled_title" msgid="3975847180953793602">"デフォルトで無効な変更"</string>
+    <string name="platform_compat_target_sdk_title">targetSdkVersion <xliff:g id="number" example="29">%d</xliff:g> 以上で有効</string>
     <string name="platform_compat_dialog_text_no_apps" msgid="5715226015751055812">"アプリの互換性の変更は、デバッグ可能アプリでのみ行えます。デバッグ可能アプリをインストールしてから、もう一度お試しください。"</string>
     <string name="disabled_dependent_setting_summary" msgid="4508635725315852504">"別の設定に依存しています"</string>
     <string name="my_device_info_account_preference_title" msgid="9197139254007133175">"アカウント"</string>
@@ -5838,7 +5845,7 @@
     <string name="user_aspect_ratio_16_9" msgid="2286644872775170164">"16:9"</string>
     <string name="user_aspect_ratio_3_2" msgid="199262962518318932">"3:2"</string>
     <string name="user_aspect_ratio_4_3" msgid="5196232982878982220">"4:3"</string>
-    <string name="user_aspect_ratio_option_a11y" msgid="1235801996029095219">"<xliff:g id="NUMERATOR">%1$s</xliff:g> by <xliff:g id="DENOMINATOR">%2$s</xliff:g>"</string>
+    <string name="user_aspect_ratio_option_a11y"><xliff:g id="numerator">%1$s</xliff:g> 対 <xliff:g id="denominator">%2$s</xliff:g></string>
     <string name="app_aspect_ratio_footer" msgid="4029509301182067475">"アスペクト比を変更すると、アプリが再起動します。保存されていない変更は失われる可能性があります。アプリによっては特定のアスペクト比で最適化できない場合があります。"</string>
     <string name="app_info_experience_category" msgid="6283332744508784886">"エクスペリエンス"</string>
     <string name="virtual_gamepad_title" msgid="8888343036739485679">"仮想ゲームパッド"</string>

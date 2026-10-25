@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2025 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="installed_app_detail_settings_screen_purpose">提供指定已安裝應用程式的詳細資訊和管理選項，包括權限、儲存空間、通知和狀態。</string>
+    <string name="installed_app_detail_unused_apps_switch_purpose">啟用後，如果長時間未使用應用程式，系統會移除權限、刪除暫存檔案、停止通知，並封存該應用程式。</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_disabled_globally">「管理未使用的應用程式」功能目前已在裝置層級停用。</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_archived_app">已封存的應用程式無法作為未使用的應用程式進行管理。</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_exempt_app">這個應用程式是重要的系統應用程式，不受「管理未使用的應用程式」功能影響。</string>
+    <string name="installed_app_detail_manage_app_unused_precondition_null_app">在裝置上找不到指定的應用程式。</string>
+    <string name="non_carrier_app_data_usage_screen_purpose">顯示應用程式透過行動數據和 Wi-Fi 連線使用的數據用量。</string>
+</resources>
