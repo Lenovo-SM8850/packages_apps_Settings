@@ -69,7 +69,7 @@
 
     <PreferenceCategory
         android:key="bluetooth_general_category"
-        android:title="General"
+        android:title="@string/bluetooth_development_general"
         android:order="200">
 
         <SwitchPreferenceCompat
@@ -99,7 +99,7 @@
 
     <PreferenceCategory
         android:key="bluetooth_audio_category"
-        android:title="Audio"
+        android:title="@string/bluetooth_development_audio"
         android:order="300">
 
         <ListPreference

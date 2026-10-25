@@ -452,4 +452,6 @@
     <string name="window_blur_enabled_summary">%1$s (%2$s)</string>
     <string name="ethernet_dns_label">DNS</string>
     <string name="ethernet_port_name">Port name</string>
+    <string name="bluetooth_development_general">General</string>
+    <string name="bluetooth_development_audio">Audio</string>
 </resources>
