@@ -447,4 +447,7 @@
     <!-- Pen writing vibration -->
     <string name="stylus_pen_writing_haptics">Writing vibration</string>
     <string name="stylus_pen_writing_haptics_summary">Vibrate when the pen tip touches the screen.</string>
+
+    <string name="window_blur_strength">Blur strength</string>
+    <string name="window_blur_enabled_summary">%1$s (%2$s)</string>
 </resources>

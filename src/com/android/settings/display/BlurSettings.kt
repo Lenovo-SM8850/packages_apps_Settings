@@ -158,7 +158,7 @@ class BlurSettings : Fragment() {
 
                 item {
                     SliderPreference(
-                        title = "Blur Strength",
+                        title = stringResource(R.string.window_blur_strength),
                         summary = "",
                         value = blurRadiusPct,
                         onValueChange = { 

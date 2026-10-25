@@ -19,6 +19,8 @@ import android.content.Context
 import android.provider.Settings
 import com.android.settings.core.BasePreferenceController
 import android.view.CrossWindowBlurListeners.CROSS_WINDOW_BLUR_SUPPORTED
+import com.android.settings.R
+import java.text.NumberFormat
 import kotlin.math.roundToInt
 
 class BlurSettingsPreferenceController(
@@ -45,9 +47,13 @@ class BlurSettingsPreferenceController(
             val percent = radiusPct.takeIf { it.isFinite() }
                 ?.coerceIn(MIN_BLUR_RADIUS_PCT, MAX_BLUR_RADIUS_PCT)
                 ?: MAX_BLUR_RADIUS_PCT
-            return "On (${percent.roundToInt()}%)"
+            return mContext.getString(
+                R.string.window_blur_enabled_summary,
+                mContext.getString(R.string.switch_on_text),
+                NumberFormat.getPercentInstance().format(percent.roundToInt() / MAX_BLUR_RADIUS_PCT),
+            )
         }
-        return "Off"
+        return mContext.getString(R.string.switch_off_text)
     }
 
     companion object {
