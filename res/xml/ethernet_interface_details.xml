@@ -42,12 +42,12 @@
                settings:enableCopying="true"/>
         <Preference
                android:key="ethernet_gateway"
-               android:title="Gateway"
+               android:title="@string/ethernet_gateway"
                android:selectable="false"
                settings:enableCopying="true"/>
        <Preference
                android:key="ethernet_dns"
-               android:title="DNS"
+               android:title="@string/ethernet_dns_label"
                android:selectable="false"
                settings:enableCopying="true"/>
        <Preference

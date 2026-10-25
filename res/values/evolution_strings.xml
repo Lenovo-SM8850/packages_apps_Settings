@@ -450,4 +450,6 @@
 
     <string name="window_blur_strength">Blur strength</string>
     <string name="window_blur_enabled_summary">%1$s (%2$s)</string>
+    <string name="ethernet_dns_label">DNS</string>
+    <string name="ethernet_port_name">Port name</string>
 </resources>
