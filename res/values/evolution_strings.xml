@@ -251,7 +251,7 @@
 
     <!-- Game space -->
     <string name="game_space_title">Game space</string>
-    <string name="game_space_summary">Enhance your gaming experience</string>
+    <string name="game_space_summary">Manage games and the in-game dashboard</string>
 
     <!-- Fingerprint lockout -->
     <string name="fingerprint_lockout_title">Disable fingerprint lockout</string>
