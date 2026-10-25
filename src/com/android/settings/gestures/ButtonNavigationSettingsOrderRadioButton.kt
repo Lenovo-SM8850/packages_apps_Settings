@@ -17,6 +17,7 @@
 package com.android.settings.gestures
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.icu.text.CaseMap
 import android.widget.ImageView
 import android.widget.TextView
@@ -25,6 +26,7 @@ import androidx.preference.PreferenceViewHolder
 import com.android.settings.R
 import com.android.settings.utils.LocaleUtils
 import java.util.Locale
+import com.android.settingslib.widget.theme.R as SettingsThemeR
 
 class ButtonNavigationSettingsOrderRadioButton(
     context: Context,
@@ -66,6 +68,10 @@ class ButtonNavigationSettingsOrderRadioButton(
     private fun bindIcon(holder: PreferenceViewHolder, iconId: Int, iconRes: Int, labelRes: Int) {
         (holder.findViewById(iconId) as? ImageView)?.also {
             it.setImageResource(iconRes)
+            // Evolver can replace the shared drawables with untinted navigation bar assets.
+            it.imageTintList = ColorStateList.valueOf(
+                context.getColor(SettingsThemeR.color.settingslib_materialColorOnSurfaceVariant)
+            )
             it.contentDescription = context.getString(labelRes)
         }
     }
