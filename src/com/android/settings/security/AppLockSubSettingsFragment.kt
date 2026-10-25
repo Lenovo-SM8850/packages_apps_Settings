@@ -731,7 +731,7 @@ fun CredentialSetupDialog(
                     }
                 }
             ) {
-                Text(if (step == 1) "Next" else "Save")
+                Text(stringResource(if (step == 1) R.string.next_label else R.string.save))
             }
         },
         dismissButton = {
