@@ -17,8 +17,9 @@
 package com.android.settings.widget
 
 // Hand-copied from Material 3 1.5.0-alpha23 (androidx.compose.material3.Scrollbar) for the alpha16
-// prebuilts. Unchanged apart from the package and the MaterialTheme import. Drop this file and
-// import androidx.compose.material3.scrollbar once the prebuilts move to alpha23.
+// prebuilts. Unchanged apart from the package, the MaterialTheme import and the short-track guard in
+// ScrollbarNode.draw(). Drop this file and import androidx.compose.material3.scrollbar once the
+// prebuilts move to a release that also guards the short track.
 
 import androidx.annotation.FloatRange
 import androidx.compose.animation.core.Animatable
@@ -484,12 +485,13 @@ private class ScrollbarNode(
             }
 
         val minThumbLengthPx = thumbMinLength.toPx()
-        // Skip drawing if the track length is too small to accommodate the min thumb length.
-        if (trackLengthPx <= 0f || trackLengthPx < minThumbLengthPx) {
+        val maxThumbLengthPx = trackLengthPx * thumbMaxLengthFraction
+        // Skip drawing if the track length is too small to accommodate the min thumb length within
+        // the max length fraction. A track just above the min thumb length would otherwise hand
+        // coerceIn below an empty range and throw.
+        if (trackLengthPx <= 0f || maxThumbLengthPx < minThumbLengthPx) {
             return
         }
-
-        val maxThumbLengthPx = trackLengthPx * thumbMaxLengthFraction
 
         val thicknessPx = thickness.toPx()
         val thumbLengthFraction = viewportSize / contentSize
