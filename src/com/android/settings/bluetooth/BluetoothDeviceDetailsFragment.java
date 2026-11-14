@@ -171,11 +171,6 @@ public class BluetoothDeviceDetailsFragment extends BluetoothDetailsConfigurable
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         mUserManager = getUserManager();
 
-        if (FeatureFlagUtils.isEnabled(context,
-                FeatureFlagUtils.SETTINGS_SHOW_STYLUS_PREFERENCES)) {
-            mInputDevice = BluetoothUtils.getInputDevice(context, deviceAddress);
-        }
-
         if (cachedDevice == null) {
             return;
         }
@@ -313,6 +308,11 @@ public class BluetoothDeviceDetailsFragment extends BluetoothDetailsConfigurable
     protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
         ArrayList<AbstractPreferenceController> controllers = new ArrayList<>();
         if (isCachedDeviceInitialized()) {
+            // The base onAttach() initializes deviceAddress before creating controllers.
+            if (FeatureFlagUtils.isEnabled(context,
+                    FeatureFlagUtils.SETTINGS_SHOW_STYLUS_PREFERENCES)) {
+                mInputDevice = BluetoothUtils.getInputDevice(context, deviceAddress);
+            }
             Lifecycle lifecycle = getSettingsLifecycle();
             controllers.add(
                     new BluetoothDetailsBannerController(
