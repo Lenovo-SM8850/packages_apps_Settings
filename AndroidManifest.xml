@@ -4524,7 +4524,7 @@
 
         <!-- Displays a list of apps available for cloning on the device -->
         <activity android:name=".Settings$ClonedAppsListActivity"
-                  android:label="@string/cloned_apps_dashboard_title"
+                  android:label="@string/clone_manager_title"
                   android:knownActivityEmbeddingCerts="@array/config_known_host_certs"
                   android:exported="true">
             <intent-filter android:priority="1">
@@ -4532,7 +4532,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                       android:value="com.android.settings.applications.manageapplications.ManageApplications" />
+                       android:value="org.evolution.settings.fragments.miscellaneous.CloneManagerFragment" />
         </activity>
 
         <!-- Application-level notification settings page, same as above but only accessible

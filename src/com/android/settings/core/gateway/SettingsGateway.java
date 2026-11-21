@@ -230,6 +230,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import org.evolution.settings.EvolutionSettings;
 import org.evolution.settings.display.refreshrate.ScreenRefreshRateFragment;
+import org.evolution.settings.fragments.miscellaneous.CloneManagerFragment;
 import org.evolution.settings.fragments.miscellaneous.SmartPixels;
 
 public class SettingsGateway {
@@ -450,6 +451,7 @@ public class SettingsGateway {
             SmartPixels.class.getName(),
             RunningServices.class.getName(),
             ScreenRefreshRateFragment.class.getName(),
+            CloneManagerFragment.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
