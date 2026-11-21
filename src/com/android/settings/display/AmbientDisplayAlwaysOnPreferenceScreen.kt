@@ -59,6 +59,7 @@ import com.android.settingslib.metadata.PreferenceSummaryProvider
 import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.ReadWritePermit
 import com.android.settingslib.metadata.SensitivityLevel
+import com.android.settingslib.metadata.SwitchPreference
 import com.android.settingslib.metadata.preferenceHierarchy
 import com.android.settingslib.preference.PreferenceBinding
 import com.android.systemui.shared.Flags.aodInactivityDetection
@@ -177,6 +178,7 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
             +AmbientDisplayIllustration(context)
             +AmbientDisplayMainSwitchPreference()
             +AmbientDisplaySchedulePreference(context)
+            +AmbientDisplayChargingPreference()
             if (context.isAmbientInactivityDetectionAvailable) {
                 +AmbientInactivityDetectionPreference(context)
             }
@@ -271,4 +273,15 @@ class AmbientDisplaySchedulePreference(context: Context) :
     override fun onResume(context: PreferenceLifecycleContext) {
         context.notifyPreferenceChange(key)
     }
+}
+
+class AmbientDisplayChargingPreference :
+    SwitchPreference(
+        key = "doze_on_charge",
+        purpose = R.string.doze_on_charge_summary,
+        title = R.string.doze_on_charge_title,
+        summary = R.string.doze_on_charge_summary,
+    ) {
+    override fun storage(context: Context) =
+        SettingsSecureStore.get(context).apply { setDefaultValue(key, false) }
 }
