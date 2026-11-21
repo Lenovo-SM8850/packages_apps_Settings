@@ -22,7 +22,9 @@ import android.hardware.display.AmbientDisplayConfiguration
 import android.os.SystemProperties
 import android.os.UserHandle
 import android.os.UserManager
+import android.provider.Settings.Secure.DOZE_ALWAYS_ON
 import androidx.fragment.app.Fragment
+import androidx.preference.Preference
 import com.android.internal.R.bool.config_dozeSupportsAodInactivityDetection
 import com.android.internal.R.bool.config_dozeSupportsAodWallpaper
 import com.android.settings.CatalystFragment
@@ -58,6 +60,7 @@ import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.ReadWritePermit
 import com.android.settingslib.metadata.SensitivityLevel
 import com.android.settingslib.metadata.preferenceHierarchy
+import com.android.settingslib.preference.PreferenceBinding
 import com.android.systemui.shared.Flags.aodInactivityDetection
 import kotlinx.coroutines.CoroutineScope
 import com.android.settingslib.metadata.preferencesapi.PreferencesApiScreen.Companion.APP_FUNCTION_UNCATEGORIZED
@@ -173,6 +176,7 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
             +AmbientDisplayTopIntroPreference()
             +AmbientDisplayIllustration(context)
             +AmbientDisplayMainSwitchPreference()
+            +AmbientDisplaySchedulePreference(context)
             if (context.isAmbientInactivityDetectionAvailable) {
                 +AmbientInactivityDetectionPreference(context)
             }
@@ -228,5 +232,43 @@ class AmbientDisplayAlwaysOnActivity :
 class AmbientPreferenceFragment : CatalystFragment() {
     override fun getPreferenceScreenBindingKey(context: Context): String {
         return AmbientDisplayAlwaysOnPreferenceScreen.KEY
+    }
+}
+
+/** Greys the controls that only apply to the always-on display while its main switch is off. */
+private fun Context.isAlwaysOnEnabled() = AmbientDisplayStorage(this).getBoolean(DOZE_ALWAYS_ON) == true
+
+private const val ALWAYS_ON_REQUIRED = "Always-on display must be enabled."
+
+class AmbientDisplaySchedulePreference(context: Context) :
+    PreferenceMetadata, PreferenceBinding, PreferenceSummaryProvider, PreferenceLifecycleProvider {
+    private val controller = AODSchedulePreferenceController(context, key)
+
+    override val key: String
+        get() = "always_on_display_schedule"
+
+    override val purpose: Int
+        get() = title
+
+    override val title: Int
+        get() = R.string.always_on_display_schedule_title
+
+    override fun dependencies(context: Context) = arrayOf(AmbientDisplayMainSwitchPreference.KEY)
+
+    override fun getEnabledDescription(): String = ALWAYS_ON_REQUIRED
+
+    override fun getEnabledStability() = PreconditionStability.UNSTABLE
+
+    override fun isEnabled(context: Context) = context.isAlwaysOnEnabled()
+
+    override fun getSummary(context: Context): CharSequence = controller.getSummary()
+
+    override fun bind(preference: Preference, metadata: PreferenceMetadata) {
+        super.bind(preference, metadata)
+        preference.fragment = AODSchedule::class.java.name
+    }
+
+    override fun onResume(context: PreferenceLifecycleContext) {
+        context.notifyPreferenceChange(key)
     }
 }

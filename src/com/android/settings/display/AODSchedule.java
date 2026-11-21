@@ -45,7 +45,12 @@ public class AODSchedule extends SettingsPreferenceFragment implements
         Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.always_on_display_schedule);
+            new BaseSearchIndexProvider(R.xml.always_on_display_schedule) {
+                @Override
+                protected boolean isPageSearchEnabled(android.content.Context context) {
+                    return new AmbientDisplayAlwaysOnPreferenceScreen(context).isAvailable(context);
+                }
+            };
 
     private static final String MODE_KEY = "doze_always_on_auto_mode";
     private static final String SINCE_PREF_KEY = "doze_always_on_auto_since";
