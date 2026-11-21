@@ -48,6 +48,7 @@ import com.android.settingslib.datastore.HandlerExecutor
 import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.datastore.KeyedObserver
 import com.android.settingslib.datastore.SettingsSecureStore
+import com.android.settingslib.datastore.SettingsSystemStore
 import com.android.settingslib.metadata.BooleanValuePreference
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.preferencesapi.preconditions.PreconditionStability
@@ -64,6 +65,7 @@ import com.android.settingslib.metadata.preferenceHierarchy
 import com.android.settingslib.preference.PreferenceBinding
 import com.android.systemui.shared.Flags.aodInactivityDetection
 import kotlinx.coroutines.CoroutineScope
+import org.evolution.settings.preferences.SystemSettingSeekBarPreference
 import com.android.settingslib.metadata.preferencesapi.PreferencesApiScreen.Companion.APP_FUNCTION_UNCATEGORIZED
 
 // LINT.IfChange
@@ -179,6 +181,9 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
             +AmbientDisplayMainSwitchPreference()
             +AmbientDisplaySchedulePreference(context)
             +AmbientDisplayChargingPreference()
+            +AmbientDisplayBrightnessPreference(context)
+            +AmbientDisplayBrightnessPreference(context, "pulse_brightness")
+            +AmbientDisplayForceBrightnessPreference()
             if (context.isAmbientInactivityDetectionAvailable) {
                 +AmbientInactivityDetectionPreference(context)
             }
@@ -284,4 +289,65 @@ class AmbientDisplayChargingPreference :
     ) {
     override fun storage(context: Context) =
         SettingsSecureStore.get(context).apply { setDefaultValue(key, false) }
+}
+
+class AmbientDisplayForceBrightnessPreference :
+    SwitchPreference(
+        key = "doze_brightness_force",
+        purpose = R.string.doze_brightness_force_summary,
+        title = R.string.doze_brightness_force_title,
+        summary = R.string.doze_brightness_force_summary,
+    ) {
+    override fun storage(context: Context) =
+        SettingsSystemStore.get(context).apply { setDefaultValue(key, false) }
+}
+
+class AmbientDisplayBrightnessPreference(
+    context: Context,
+    override val key: String = "doze_brightness",
+) :
+    PreferenceMetadata, PreferenceBinding, PreferenceAvailabilityProvider, PreferenceLifecycleProvider {
+    private val controller = DozeBrightnessPreferenceController(context, key)
+
+    override val purpose: Int
+        get() = title
+
+    override val title: Int
+        get() = if (key == "pulse_brightness") R.string.ambient_pulse_brightness_title
+            else R.string.ambient_doze_brightness_title
+
+    override val availabilityDescription =
+        "The device must support always-on display and the corresponding brightness control."
+
+    override fun getAvailabilityStability() = PreconditionStability.UNSTABLE
+
+    override fun isAvailable(context: Context) = controller.isAvailable
+
+    // The pulse brightness applies to ambient display wake-ups, not only to always-on.
+    override fun dependencies(context: Context) =
+        if (key == "pulse_brightness") arrayOf() else arrayOf(AmbientDisplayMainSwitchPreference.KEY)
+
+    override fun getEnabledDescription(): String? =
+        if (key == "pulse_brightness") null else ALWAYS_ON_REQUIRED
+
+    override fun getEnabledStability() = PreconditionStability.UNSTABLE
+
+    override fun isEnabled(context: Context) = key == "pulse_brightness" || context.isAlwaysOnEnabled()
+
+    override fun createWidget(context: Context) =
+        SystemSettingSeekBarPreference(context).apply {
+            min = -1
+            max = 255
+        }
+
+    override fun bind(preference: Preference, metadata: PreferenceMetadata) {
+        super.bind(preference, metadata)
+        preference.isPersistent = false
+        preference.onPreferenceChangeListener = controller
+        controller.updateState(preference)
+    }
+
+    override fun onResume(context: PreferenceLifecycleContext) {
+        context.notifyPreferenceChange(key)
+    }
 }
