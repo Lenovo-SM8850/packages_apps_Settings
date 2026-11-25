@@ -4535,6 +4535,14 @@
                        android:value="org.evolution.settings.fragments.miscellaneous.CloneManagerFragment" />
         </activity>
 
+        <!-- Opens an app clone from a pinned home screen shortcut -->
+        <activity android:name="org.evolution.settings.fragments.miscellaneous.CloneShortcutActivity"
+                  android:exported="false"
+                  android:excludeFromRecents="true"
+                  android:noHistory="true"
+                  android:taskAffinity=""
+                  android:theme="@android:style/Theme.NoDisplay" />
+
         <!-- Application-level notification settings page, same as above but only accessible
              internally from system server -->
         <activity android:name="Settings$NotificationReviewPermissionsActivity"
